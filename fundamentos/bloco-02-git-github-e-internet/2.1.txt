@@ -1,0 +1,5 @@
+Exercícios:
+Parte 1- Instalação e configuração;
+Parte 2 - Criar conta no GitHub;
+Adicionando uma chave SSH na sua conta do GitHub;
+Parte 4 - O seu repositório no GitHub.
