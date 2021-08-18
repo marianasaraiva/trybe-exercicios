@@ -3,8 +3,9 @@ Exercícios:
 Dinâmica dos post-its: Entender qual o caminho da informação quando o usuário digita algum site até o retorno da resposta do site ao mesmo.
 
 Cliente digita o domínio no browser, ex: www.google.com e tecla enter.
-Essa domínio é direcionada ao DNS que interpreta o texto e informa qual o IP daquele texto e devolve ao cliente, ex: 
+Essa domínio é direcionada ao DNS que interpreta o texto e informa qual o IP daquele texto e devolve ao cliente, ex: 142.250.219.46
 Alguns protocolos, como o TCP/IP e HTTP são realizados gerando uma requisição ao servidor.
 Caso o fluxo de solicitações seja grande, poderá ocorrer o balanceamento das cargas pelo Load Balance.
 Após o servidor encontrar a página, status 200, ou não encontrar a página, status 404, gerando uma resposta interpretada por alguns protocolos, como o TCP/IP e HTTP.
 Ao receber o pacote o cliente converte os dados e renderiza para exibir na tela.
+

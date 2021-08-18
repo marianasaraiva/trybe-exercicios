@@ -1,0 +1,7 @@
+Unix & Bash - Parte 1
+Exercícios:
+Entender os principais comandos utilizados no terminal.
+
+Imagem com os comandos estudados neste dia na URL a seguir:
+https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/fundamentals/unix/images/comandos_part2-e893aa1ab9d3fc5eb9615ff977745e4d.png
+
