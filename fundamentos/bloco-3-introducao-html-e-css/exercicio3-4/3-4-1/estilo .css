@@ -6,25 +6,28 @@ $light-french-beige: rgba(179, 158, 99, 1); bege
 $international-orange-golden-gate-bridge: rgba(195, 47, 39, 1); laranja fechado
 */
 
+* {
+    padding: 0px;
+    margin: 0px;
+}
 
 body {
     background-color: rgb(218, 202, 158);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     color: rgba(120, 1, 22, 1);
     text-align: center;
     margin: 20px 0px;
 }
 
 img {
-    width: 350px;
-    height: 280px;
+    width: 250px;
+    height: 220px;
     border: 2px solid rgba(120, 1, 22, 1);
     text-align: center;
 }
 
 p,h2,h3,h4 {
-    margin: 10px;
     padding-bottom: 10px;
 }
 
@@ -79,16 +82,29 @@ nav ul {
     margin-right: auto;
 }
 
+.article {
+    margin:10px;
+    background-color: rgb(218, 202, 158);
+    float: left;
+    color: rgba(120, 1, 22, 1);
+    max-width: 80%;
+    margin: 10px;
+    text-align: center;
+    z-index: 0;
+}
+
 .section1 {
     background-color: rgb(218, 202, 158);
     display: inline-block;
     color: rgba(120, 1, 22, 1);
     max-width: 45%;
-    margin: 5px;
+    margin: 20px;
     text-align: justify;
+    z-index: 2;
 }
 
 .table {
+    margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -101,8 +117,36 @@ tr:nth-child(odd) {
     color: rgb(218, 202, 158);
   }
 
+.aside {
+    background-color: rgba(120, 1, 22, 1);
+    color:rgb(218, 202, 158);
+    height: 550px;
+    float: right;
+}
 
-footer {
+.aside a {
+    color:rgb(218, 202, 158);
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+
+.aside a:hover {
+    color: rgba(195, 47, 39, 1);
+}
+.aside h3,li {
+    margin-bottom: 30px;
+}
+
+.aside p,h3,h4{
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.footer {
+    clear: both;
     background-color: rgba(120, 1, 22, 1);
     color: rgb(218, 202, 158);
     padding: 20px;
