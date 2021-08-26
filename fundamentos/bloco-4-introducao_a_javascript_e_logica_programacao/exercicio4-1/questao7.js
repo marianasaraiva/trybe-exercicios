@@ -16,6 +16,7 @@ if(percentagem < 0 && percentagem >100){
   console.log("F")
 }
 
+
 /*
 //Gabarito
 
