@@ -13,13 +13,17 @@ Atenção! Note que esse exercício é bem mais complexo que o anterior! Não ba
 
 let n = 5;
 let asteriscos = "*";
-let linha = "";
-let espaco = "@"
+let linha= "";
+let espaco = " ";
+let linhaEspaco = "";
 
-for (let index = 0; index <= n ; index += 1) {
+for (let index = 1; index <= n ; index += 1) {
   linha = linha + asteriscos;
-  for(let index2 = 0; index2 < (n-1) ; index2 += 1){
-    linha = linha + espaco;
-};
+  linhaEspaco = "";
+
+  for(let index2 = (n - index); index2 >= 1; index2 -= 1){
+    linhaEspaco = linhaEspaco + espaco;
   }
+  console.log(linhaEspaco + linha);
+}
   
