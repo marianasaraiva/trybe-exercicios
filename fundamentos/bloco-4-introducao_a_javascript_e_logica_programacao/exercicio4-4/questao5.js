@@ -14,14 +14,11 @@ let info1 = {
   recorrente: 'sim',
 };
 
+
 for(let ordem in info){
-  //var resultado = info[ordem];
-  console.log(info[ordem]);
+  if ((ordem === 'recorrente') && (info[ordem] === 'sim') && (info1[ordem] === 'sim')) {
+    console.log('Ambos recorrentes');
+  } else {
+    console.log(info[ordem] + ' e ' + info1[ordem]);
+  }
 };
-
-for(let ordem1 in info1){
-  //var resultado1 = info1[ordem1];
-  console.log(info1[ordem1]);
-};
-
-//console.log(resultado + ' ' + resultado1);
