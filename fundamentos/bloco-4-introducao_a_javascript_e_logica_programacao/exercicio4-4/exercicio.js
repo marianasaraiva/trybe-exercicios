@@ -98,17 +98,42 @@ Multiplicação (a * b)
 Divisão (a / b)
 Módulo (a % b)
 */
+
+//adição
 function sum(a, b) {
   let resultado = a + b;
   return resultado;
 }
 
-sum();
+console.log(sum(5, 4));
 
-
-function subtrair(a,b) {
+//subtração
+function subtrair(a, b) {
   return a-b;
 }
-subtrair();
+
+console.log(subtrair(5, 2));
+
+//multiplicação
+function multiplicar(a, b){
+  return a * b;
+}
+
+console.log(multiplicar(3, 8));
+
+//divisão
+function dividir(a, b) {
+  return a / b;  
+}
+
+console.log(dividir(10, 2));
+
+//módulo
+function modulo(a, b) {
+  return a % b;  
+}
+
+console.log(modulo(12,5));
+
 
 
