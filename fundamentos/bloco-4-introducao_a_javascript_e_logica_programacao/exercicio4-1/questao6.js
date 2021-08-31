@@ -1,5 +1,6 @@
 
-/*
+
+
 // Gabarito
 const chessPiece = 'bispo';
 
@@ -26,4 +27,3 @@ switch (chessPiece.toLowerCase()) {
     console.log('Erro, peça inválida!');
     break;
 };
-*/

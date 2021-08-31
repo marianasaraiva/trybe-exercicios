@@ -15,3 +15,15 @@ function inteirosMaior(numeros){
 }
 
 console.log(inteirosMaior([2, 3, 6, 7, 10, 1]));
+
+
+
+/*
+const array = [2, 3, 6, 7, 10, 1];
+array.sort(function (a,b){
+  return a-b
+})
+console.log(array)
+
+Colocando em ordem crescente
+*/

@@ -8,20 +8,17 @@ Retorno esperado: false
 */
 
 
-// function verificaPalindrome(palavra){
-// var palindromo = '';
-// for (let index = palavra.length -1; index >= 0; index -= 1) {
-//   palindromo += palavra[index];
-// }
-// if(palavra === palindromo){
-//   return true
-// } else {
-//   return false
-// }
-// }
+function verificaPalindrome(palavra){
+  return palavra === palavra.split('').reverse().join('');
+};
 
-// console.log(verificaPalindrome(arara))
 
+console.log(verificaPalindrome('arara'));
+
+
+
+
+/* Gabarito
 function verificaPalindrome(word){
   for(index in word){
     if(word[index] != word[(word.length - 1) - index]){
@@ -33,3 +30,4 @@ function verificaPalindrome(word){
 
 console.log(verificaPalindrome('arara'));
 console.log(verificaPalindrome('desenvolvimento'));
+*/
