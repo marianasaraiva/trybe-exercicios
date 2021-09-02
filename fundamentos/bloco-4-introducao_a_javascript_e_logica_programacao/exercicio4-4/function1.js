@@ -10,7 +10,12 @@ Retorno esperado: false
 
 function verificaPalindrome(palavra){
   return palavra === palavra.split('').reverse().join('');
+  // arara === arara
 };
+
+//{ a, r, a, r, a }
+// { a, r, a, r, a }
+//arara
 
 
 console.log(verificaPalindrome('arara'));
