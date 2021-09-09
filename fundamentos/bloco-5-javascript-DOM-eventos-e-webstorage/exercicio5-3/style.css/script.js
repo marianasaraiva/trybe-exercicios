@@ -72,15 +72,83 @@ function altera() {
 altera();
 
 // 4. Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+// Adicione a este botão o ID "btn-friday" .
+// Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
+function botoes(string) {
+  let buttonPai = document.querySelector('.buttons-container');
+  let buttonFilho = document.createElement('button');
+  buttonFilho.id = 'btn-friday';
+  buttonPai.appendChild(buttonFilho);
+  buttonFilho.innerHTML = string;
+}
+
+botoes('Sexta-feira')
 
 // 5. Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+function adicionaEventoButton (texto) {
+  let buttonFriday = document.querySelector('#btn-friday');
+  let fridayText = document.querySelectorAll('.friday');
+  //console.log(fridayText[0].nextElementSibling.innerText - 1);
+
+  buttonFriday.addEventListener('click', function alteraTexto (){
+    for (let index = 0; index < fridayText.length; index += 1){
+      if(fridayText[index].innerText === 'Sexta-feira'){
+        fridayText[index].innerText = fridayText[index].nextElementSibling.innerText - 1;
+      } else {
+        fridayText[index].innerText = 'Sexta-feira';
+      }
+    } 
+  })
+};
+adicionaEventoButton('Sexta-feira');
 
 // 6. Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+// Dica - Propriedade: event.target .
+let zoomDays = document.querySelector('#days');
+zoomDays.addEventListener('mouseover', function(event){
+  event.target.style.fontSize = '24px';
+});
+
+zoomDays.addEventListener('mouseout', function(event){
+  event.target.style.fontSize = '20px';
+});
 
 // 7. Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+function adicionaTarefa(tarefa) {
+  let elementoDiv = document.querySelector('.my-tasks');
+  let spanTarefa = document.createElement('span');
+  elementoDiv.appendChild(spanTarefa);
+  spanTarefa.innerText = tarefa;
+  spanTarefa.className = 'task';
+}
+adicionaTarefa('Cozinhar');
+//teria que fazer um input?
 
 // 8. Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+// O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+function adicionaLegenda() {
+  let elementoDiv = document.querySelector('.my-tasks');
+  let legenda = document.createElement('div');
+  elementoDiv.appendChild(legenda);
+  legenda.className = "task"
+  legenda.style.backgroundColor = 'red';
+}
+adicionaLegenda();
 
 // 9. Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+// function selecionarTarefa() {
+//   let taskSelecionada = document.querySelector('.task');
+//   taskSelecionada.addEventListener('click', function(event){
+//     event.target.classList.toggle('selected');
+//     console.log(event.target)
+//   });
+// };
+
+// selecionarTarefa();
 
 // 10. Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
