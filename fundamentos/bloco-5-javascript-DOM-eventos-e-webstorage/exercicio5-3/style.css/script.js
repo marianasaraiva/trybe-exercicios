@@ -85,19 +85,19 @@ function botoes(string) {
 botoes('Sexta-feira')
 
 // 5. Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
-function adicionaEventoButton (texto) {
+function adicionaEventoButton(texto) {
   let buttonFriday = document.querySelector('#btn-friday');
   let fridayText = document.querySelectorAll('.friday');
   //console.log(fridayText[0].nextElementSibling.innerText - 1);
 
-  buttonFriday.addEventListener('click', function alteraTexto (){
-    for (let index = 0; index < fridayText.length; index += 1){
-      if(fridayText[index].innerText === 'Sexta-feira'){
+  buttonFriday.addEventListener('click', function alteraTexto() {
+    for (let index = 0; index < fridayText.length; index += 1) {
+      if (fridayText[index].innerText === 'Sexta-feira') {
         fridayText[index].innerText = fridayText[index].nextElementSibling.innerText - 1;
       } else {
         fridayText[index].innerText = 'Sexta-feira';
       }
-    } 
+    }
   })
 };
 adicionaEventoButton('Sexta-feira');
@@ -105,11 +105,11 @@ adicionaEventoButton('Sexta-feira');
 // 6. Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 // Dica - Propriedade: event.target .
 let zoomDays = document.querySelector('#days');
-zoomDays.addEventListener('mouseover', function(event){
+zoomDays.addEventListener('mouseover', function (event) {
   event.target.style.fontSize = '24px';
 });
 
-zoomDays.addEventListener('mouseout', function(event){
+zoomDays.addEventListener('mouseout', function (event) {
   event.target.style.fontSize = '20px';
 });
 
@@ -140,15 +140,18 @@ adicionaLegenda();
 
 // 9. Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
 // Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
-
-// function selecionarTarefa() {
-//   let taskSelecionada = document.querySelector('.task');
-//   taskSelecionada.addEventListener('click', function(event){
-//     event.target.classList.toggle('selected');
-//     console.log(event.target)
-//   });
-// };
-
-// selecionarTarefa();
+let taskSelecionada = document.querySelector('.task');
+function adicionaEvento(event) {
+  event.target.classList.add('selected');
+}
+taskSelecionada.addEventListener('click', adicionaEvento);
+//essa ficou incompleta, preciso fazer o retorno da ação.
 
 // 10. Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+function corLegendaTarefa (cor){
+  let diaTarefa = document.querySelector('#days');
+  diaTarefa.addEventListener('click', function (event) {
+  event.target.style.color = cor;
+});
+}
+corLegendaTarefa('red')
