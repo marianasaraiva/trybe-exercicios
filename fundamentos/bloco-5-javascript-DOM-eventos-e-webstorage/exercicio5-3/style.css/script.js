@@ -13,7 +13,6 @@ function createDaysOfTheWeek() {
     weekDaysList.appendChild(dayListItem);
   };
 };
-
 createDaysOfTheWeek();
 
 // 1. O array dezDaysList contém os dois últimos dias de novembro e os dias do mês de dezembro. Desenvolva uma função que crie dinamicamente cada dia do calendário e os adicione como filhos/filhas da tag <ul> com ID "days" . Note que os dias 29 e 30 de novembro estão no array pois representam respectivamente Domingo e Segunda-feira.
@@ -49,7 +48,6 @@ function button(string) {
   chamaPai.appendChild(chamaDivFilho);
   chamaDivFilho.innerText = string;
 }
-
 button("Feriados");
 
 // 3. Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
@@ -68,7 +66,6 @@ function altera() {
     }
   });
 }
-
 altera();
 
 // 4. Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
@@ -81,7 +78,6 @@ function botoes(string) {
   buttonPai.appendChild(buttonFilho);
   buttonFilho.innerHTML = string;
 }
-
 botoes('Sexta-feira')
 
 // 5. Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
@@ -120,7 +116,7 @@ function adicionaTarefa(tarefa) {
   let spanTarefa = document.createElement('span');
   elementoDiv.appendChild(spanTarefa);
   spanTarefa.innerText = tarefa;
-  spanTarefa.className = 'task';
+  //spanTarefa.className = 'task';
 }
 adicionaTarefa('Cozinhar');
 //teria que fazer um input?
@@ -142,16 +138,16 @@ adicionaLegenda();
 // Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
 let taskSelecionada = document.querySelector('.task');
 function adicionaEvento(event) {
-  event.target.classList.add('selected');
+  //toggle: alterna as classes.
+  event.target.classList.toggle('selected');
 }
 taskSelecionada.addEventListener('click', adicionaEvento);
-//essa ficou incompleta, preciso fazer o retorno da ação.
 
 // 10. Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
-function corLegendaTarefa (cor){
+function corLegendaTarefa(cor) {
   let diaTarefa = document.querySelector('#days');
   diaTarefa.addEventListener('click', function (event) {
-  event.target.style.color = cor;
-});
+    event.target.style.color = cor;
+  });
 }
 corLegendaTarefa('red')
