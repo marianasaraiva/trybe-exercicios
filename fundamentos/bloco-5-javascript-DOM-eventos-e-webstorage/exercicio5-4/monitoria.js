@@ -4,7 +4,7 @@ const shoppingList = document.getElementById('shopping-list');
 const headerPrincipal = document.getElementById('header-principal');
 
 addButton.addEventListener('click', function() {
-  if(inputList.ariaValueMax.length > 3) {
+  if(inputList.value.length > 3) {
     let elementLi = document.createElement('li');
     elementLi.innerText = inputList.value;
     shoppingList.appendChild(elementLi);
@@ -22,10 +22,11 @@ addButton.addEventListener('click', function() {
 
 });
 
-shoppingList.addEventListener('dbclick', function (event){
-  if(event.target.tagName === 'LI')
-  event.target.classList.toggle('comprado')
-  });
+shoppingList.addEventListener('dblclick', function (event){
+  if(event.target.tagName === 'LI'){
+    event.target.classList.toggle('comprado')
+  }
+});
 
 window.onload = () => {
   let localCompra = JSON.parse(localStorage.getItem('listaCompra'));
