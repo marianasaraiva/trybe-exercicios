@@ -1,7 +1,7 @@
 const firstLi = document.getElementById('first-li');
 const secondLi = document.getElementById('second-li');
 const thirdLi = document.getElementById('third-li');
-const input = document.getElementById('input');
+//  const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
 
 
@@ -20,8 +20,10 @@ firstLi.addEventListener('click', addClass);
 secondLi.addEventListener('click', addClass);
 thirdLi.addEventListener('click', addClass);
 
+
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+const input = document.getElementById('input');
 function alteraTexto(event){
   let chamaTech2 = document.querySelector('.tech');
   chamaTech2.innerHTML = event.target.value;
