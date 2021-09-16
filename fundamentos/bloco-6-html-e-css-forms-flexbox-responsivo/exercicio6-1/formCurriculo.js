@@ -7,7 +7,7 @@ function criarEstados() {
     estadosSelect.appendChild(estadosOption).value = estadosBrasil[index];
   }
 }
-
+// função para validar a Data, utilizando o split.
 function validarData() {
   let inputValueData = document.querySelector('#data').value;
   if (inputValueData === '') {
@@ -32,8 +32,10 @@ function validarData() {
 
 let bodyPai = document.querySelector('body');
 let divContainer = document.createElement('div');
+divContainer.className = 'div-elementos'
 bodyPai.appendChild(divContainer);
 
+//selecionar todos os ids que precisam ser recuperados na div.
 let nome = document.getElementById('name');
 let email = document.getElementById('email');
 let cpf = document.getElementById('cpf');
@@ -44,34 +46,36 @@ let cargo = document.getElementById('cargo');
 let descricao = document.getElementById('descricao');
 let data = document.getElementById('data');
 
-
+let valorMarcadoLocadouro = "";
+console.log(valorMarcadoLocadouro);
 function enviarEventoButton(event) {
   event.preventDefault();
   if (validarData()) {
-    // usar o atraves da tagName name para pegar o item em comum
+    // como estava retornando um NodeList, foi necessário essa lógica para recuperar o valor deste item.
+    // usar o atraves da tagName name do html para pegar o item em comum
     let logadouro = document.getElementsByName('logadouro');
-    let valorMarcadoLocadouro = "";
     for (let i = 0; i < logadouro.length; i += 1) {
       if (logadouro[i].checked) {
         valorMarcadoLocadouro = logadouro[i].value;
       }
     }
-
+    // for para encontrar o value do array de inputs do form
     let arr = [nome, email, cpf, endereco, cidade, estado, cargo, descricao, data];
     let retornoElementoArray = '';
     for (let index = 0; index < arr.length; index += 1) {
       retornoElementoArray += arr[index].value;
     }
-
+    // concatenado o value do radio e input da página
     divContainer.innerHTML = valorMarcadoLocadouro + retornoElementoArray;
   }
 }
-
+// funçao para excluir a div que contem os inputs pedidos na questao 3. 
 function limparButton() {
-  // clear fields
+  let bodyPai = document.querySelector('body');
+  bodyPai.removeChild(divContainer);
 }
 
-
+// chamando as funçoes pelo window.onload e setando a ação dos botões.
 window.onload = function () {
   criarEstados();
   let buttonEnviar = document.querySelector('.enviar');
