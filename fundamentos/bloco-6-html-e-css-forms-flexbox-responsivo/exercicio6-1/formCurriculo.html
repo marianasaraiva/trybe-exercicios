@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" condevice-widthtent="width=, initial-scale=1.0">
+  <title>Formulário Currículo</title>
+  <!-- <link rel="stylesheet" href="stile.css"> -->
+</head>
+<body>
+  <h1>Curriculum Vitae</h1>
+  <form action="#" method="GET">
+    <fieldset id="container-1">
+      <legend>Dados pessoais:</legend>
+      <!--Crie um <fieldset> para os seguintes dados pessoais: Nome -->
+      <label for="name">Nome completo:</label>
+      <input type="text" name="name" required id="name" maxlength="40">
+      <br>
+      <!--Email:-->
+      <label for="email">E-mail:</label>
+      <input type="email" name="email" required autocomplete="email" maxlength="50" id="email">
+      <br>
+      <!--CPF:-->
+      <label for="cpf">CPF:</label>
+      <input type="text" name="cpf" required  maxlength="11" id="cpf">
+      <br>
+      <!--Endereço:--> 
+      <label for="endereco">Endereço:</label>
+      <input type="text" name="endereco" required maxlength="200"  id="endereco">
+      <br>
+      <!-- Cidade: -->
+      <label for="cidade">Cidade:</label>
+      <input type="text" name="cidade" required maxlength="200" id="cidade">
+      <br> 
+      <!-- Estado:-->
+      <label for="estado">Estado:</label>
+      <select name="estado" id="estado" required>
+      </select>
+      <!-- Tipo:-->
+      <fieldset class="logadouro">
+        <legend>Casa ou Apartamento</legend>
+        <input type="radio" name="logadouro" value="casa" id="logadouro-1" required>
+        <label for="logadouro-1">Casa</label>
+
+        <input type="radio" name="logadouro" value="apartamento" id="logadouro-2" checked required>
+        <label for="logadouro-2">Apartamento</label>
+      </fieldset>
+    </fieldset>
+    <!-- 2.Crie outro <fieldset> para dados do seu último emprego:-->
+    <fieldset class="container-2">
+      <legend>Último emprego:</legend>
+      <!--Resumo do currículo : -->
+      <label for="resumo">Resumo do currículo:</label>
+      <textarea name="resumo" id="resumo" cols="70" rows="10" maxlength="1000" required></textarea>
+      <br>
+      <!-- Cargo:-->
+      <label for="cargo">Cargo:</label>
+      <input type="text" name="cargo" required maxlength="40" id="cargo">
+      <br> 
+      <!-- Descrição do Cargo:-->
+      <label for="descricao">Descrição do cargo:</label>
+      <input type="text" name="descricao" required maxlength="500" id="descricao">
+      <br> 
+      <!-- Data de Inicio:-->
+      <label for="data">Data de início:</label>
+      <input type="text" placeholder="00/00/0000" name="data" required id="data">
+      <br> 
+    </fieldset>
+    <!-- na questao 3 usar o preventDefualt-->
+    <button class="enviar" type="submit">Enviar</button>
+    <button class="apagar" type="reset">Apagar</button>
+    </form>
+    
+    <script src="formCurriculo.js">
+      
+    </script>
+  </body>
+</html>
