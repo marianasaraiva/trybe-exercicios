@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" condevice-widthtent="width=, initial-scale=1.0">
+  <title>Formulário Currículo</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="formCurriculo.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <div class="form-container text-center" id="container-header">
+      <h1 class="display-1">Curriculum Vitae</h1>
+    </div>
+
+    <div class="form-container" id=container-form>
+      <form action="#" method="GET">
+        <div class="container">
+          <div class="container">
+            <legend>Dados pessoais:</legend>
+            <!--Crie um <fieldset> para os seguintes dados pessoais: Nome -->
+            <label for="name">Nome completo:</label>
+            <input class="form-control" type="text" name="name" required id="name" maxlength="40">
+            <!--Email:-->
+            <label for="email">E-mail:</label>
+            <input class="form-control" type="email" name="email" required autocomplete="email" maxlength="50"
+              id="email">
+            <!--CPF:-->
+            <label for="cpf">CPF:</label>
+            <input class="form-control" type="text" name="cpf" required maxlength="11" id="cpf">
+            <!--Endereço:-->
+            <label for="endereco">Endereço:</label>
+            <input class="form-control" type="text" name="endereco" required maxlength="200" id="endereco">
+            <!-- Cidade: -->
+            <label for="cidade">Cidade:</label>
+            <input class="form-control" type="text" name="cidade" required maxlength="200" id="cidade">
+            <!-- Estado:-->
+            <label for="estado">Estado:</label>
+            <select class="form-select" name="estado" id="estado" required>
+            </select>
+            <!-- Tipo:-->
+            <div class="logadouro form-check">
+              <input class="form-check-input" type="radio" name="logadouro" value="casa" id="logadouro-1" required>
+              <label class="form-check-label" for="logadouro-1">Casa</label>
+            </div>
+            <div class="logadouro form-check">
+              <input class="form-check-input" type="radio" name="logadouro" value="apartamento" id="logadouro-2" checked
+                required>
+              <label class="form-check-label" for="logadouro-2">Apartamento</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.Crie outro <fieldset> para dados do seu último emprego:-->
+        <div class="container">
+          <div class="container">
+            <fieldset class="container-2">
+              <legend>Último emprego:</legend>
+              <!--Resumo do currículo : -->
+              <label for="resumo">Resumo do currículo:</label>
+              <textarea class="form-control" name="resumo" id="resumo" cols="70" rows="10" maxlength="1000"
+                required></textarea>
+
+              <!-- Cargo:-->
+              <label for="cargo">Cargo:</label>
+              <input class="form-control" type="text" name="cargo" required maxlength="40" id="cargo">
+
+              <!-- Descrição do Cargo:-->
+              <label for="descricao">Descrição do cargo:</label>
+              <input class="form-control" type="text" name="descricao" required maxlength="500" id="descricao">
+
+              <!-- Data de Inicio:-->
+              <label for="data">Data de início:</label>
+              <input class="form-control" type="text" placeholder="00/00/0000" name="data" required id="data">
+
+            </fieldset>
+          </div>
+
+        </div>
+
+        <!-- na questao 3 usar o preventDefualt-->
+        <div class="container">
+          <div class="container d-grid gap-2 col-6 mx-auto">
+            <button class="enviar btn btn-secondary btn-lg" type="submit">Enviar</button>
+            <button class="apagar btn btn-info btn-lg" type="reset">Apagar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="formCurriculo.js">
+
+  </script>
+</body>
+
+</html>
