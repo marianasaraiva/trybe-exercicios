@@ -8,6 +8,7 @@ function criarEstados() {
   }
 }
 // função para validar a Data, utilizando o split.
+// Exercicio feito em grupo Nath e Monitor Rod
 function validarData() {
   let inputValueData = document.querySelector('#data').value;
   if (inputValueData === '') {
@@ -17,22 +18,22 @@ function validarData() {
   let dia = pedacoInput[0];
   let mes = pedacoInput[1];
   let ano = pedacoInput[2];
-  if (pedacoInput[0] < 0 && pedacoInput[0] > 31) {
+  if (dia < 1 || dia > 31) {
     return alert('Erro no dia');
   }
-  if (pedacoInput[1] < 0 && pedacoInput[1] > 12) {
-    return alert('Erro no dia');
+  if (mes <1 || mes > 12) {
+    return alert('Erro no mês');
   }
-  if (pedacoInput[2] < 0) {
-    return alert('Erro no dia');
+  if (ano < 0) {
+    return alert('Erro no ano');
   }
-  // return `${dia}/${mes}/${ano}`;
   return true;
 }
 
+
 let bodyPai = document.querySelector('body');
 let divContainer = document.createElement('div');
-divContainer.className = 'div-elementos'
+divContainer.className = 'div-elementos';
 bodyPai.appendChild(divContainer);
 
 //selecionar todos os ids que precisam ser recuperados na div.
