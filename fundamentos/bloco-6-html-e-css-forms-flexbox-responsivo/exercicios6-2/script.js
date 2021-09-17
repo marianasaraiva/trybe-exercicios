@@ -9,16 +9,6 @@ function criarEstados() {
 }
 criarEstados();
 
-window.onload = function () {
-  criarEstados();
-  let buttonEnviar = document.querySelector('.enviar');
-  buttonEnviar.addEventListener('click', enviarEventoButton);
-
-  let buttonApagar = document.querySelector('.apagar');
-  buttonApagar.addEventListener('click', limparButton)
-}
-
-
 // Validando data com Biblioteca Pikaday
 let picker = new Pikaday({
   field: document.getElementById('datepicker'),
