@@ -7,6 +7,7 @@ function criarEstados() {
     estadosSelect.appendChild(estadosOption).value = estadosBrasil[index];
   }
 }
+criarEstados();
 // função para validar a Data, utilizando o split.
 // Exercicio feito em grupo Nath e Monitor Rod
 function validarData() {
@@ -85,3 +86,6 @@ window.onload = function () {
   let buttonApagar = document.querySelector('.apagar');
   buttonApagar.addEventListener('click', limparButton)
 }
+
+
+

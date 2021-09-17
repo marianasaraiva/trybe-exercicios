@@ -22,29 +22,29 @@
     </div>
 
     <div class="form-container" id=container-form>
-      <form action="#" method="GET">
+      <form action="#" method="GET" class="js-form-1">
         <div class="container">
           <div class="container">
             <legend>Dados pessoais:</legend>
             <!--Crie um <fieldset> para os seguintes dados pessoais: Nome -->
             <label for="name">Nome completo:</label>
-            <input class="form-control" type="text" name="name" required id="name" maxlength="40">
+            <input class="form-control" type="text" name="name" data-validate-field="nome" id="name" maxlength="40">
             <!--Email:-->
             <label for="email">E-mail:</label>
-            <input class="form-control" type="email" name="email" required autocomplete="email" maxlength="50"
+            <input class="form-control" type="email" name="email" autocomplete="email" data-validate-field="email" maxlength="50"
               id="email">
             <!--CPF:-->
             <label for="cpf">CPF:</label>
-            <input class="form-control" type="text" name="cpf" required maxlength="11" id="cpf">
+            <input class="form-control" type="text" name="cpf" data-validate-field="cpf" maxlength="11" id="cpf">
             <!--Endereço:-->
             <label for="endereco">Endereço:</label>
-            <input class="form-control" type="text" name="endereco" required maxlength="200" id="endereco">
+            <input class="form-control" type="text" name="endereco" data-validate-field="endereco" maxlength="200" id="endereco">
             <!-- Cidade: -->
             <label for="cidade">Cidade:</label>
-            <input class="form-control" type="text" name="cidade" required maxlength="200" id="cidade">
+            <input class="form-control" type="text" name="cidade" data-validate-field="cidade" maxlength="200" id="cidade">
             <!-- Estado:-->
             <label for="estado">Estado:</label>
-            <select class="form-select" name="estado" id="estado" required>
+            <select class="form-select" name="estado" data-validate-field="estado" id="estado">
             </select>
             <!-- Tipo:-->
             <div class="logadouro form-check">
@@ -66,20 +66,19 @@
               <legend>Último emprego:</legend>
               <!--Resumo do currículo : -->
               <label for="resumo">Resumo do currículo:</label>
-              <textarea class="form-control" name="resumo" id="resumo" cols="70" rows="10" maxlength="1000"
-                required></textarea>
+              <textarea class="form-control" name="resumo" id="resumo" cols="70" rows="10" maxlength="1000"></textarea>
 
               <!-- Cargo:-->
               <label for="cargo">Cargo:</label>
-              <input class="form-control" type="text" name="cargo" required maxlength="40" id="cargo">
+              <input class="form-control" type="text" name="cargo" maxlength="40" id="cargo">
 
               <!-- Descrição do Cargo:-->
               <label for="descricao">Descrição do cargo:</label>
-              <input class="form-control" type="text" name="descricao" required maxlength="500" id="descricao">
+              <input class="form-control" type="text" name="descricao" maxlength="500" id="descricao">
 
               <!-- Data de Inicio:-->
               <label for="data">Data de início:</label>
-              <input class="form-control" type="text" placeholder="00/00/0000" name="data" required id="data">
+              <input class="form-control" type="text" placeholder="00/00/0000" autocomplete="none" name="data" id="datepicker">
 
             </fieldset>
           </div>
@@ -100,7 +99,9 @@
 
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
 
-  <script src="formCurriculo.js">
+  <script src="/node_modules/just-validate/dist/js/just-validate.min.js">  </script>
+
+  <script src="script.js"></script>
 
   </script>
 </body>
