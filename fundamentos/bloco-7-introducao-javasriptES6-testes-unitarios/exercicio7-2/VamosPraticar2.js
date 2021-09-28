@@ -24,7 +24,7 @@ const lesson3 = {
 
 const adicionaTurno = (objeto, chave, valor) => objeto[chave] = valor;
 
-console.log(adicionaTurno(lesson2, 'turno', 'manhã'));
+adicionaTurno(lesson2, 'turno', 'manhã');
 // console.log(lesson2);
 
 // 2- Crie uma função para listar as keys de um objeto. Essa função deve receber um objeto como parâmetro.
@@ -42,10 +42,10 @@ const valoresObjeto = (objeto) => Object.values(objeto);
 // 5- Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3 . Ao executar o comando console.log(allLessons) , a saída deverá ser a seguinte:
 let newObject = {}; // objeto criado para colocar o resultado da função.
 const concatenaObjetos = (newObject) => {
-  let objeto = Object.assign(newObject, {lesson1}, {lesson2}, {lesson3});
+  let objeto = Object.assign(newObject, { lesson1 }, { lesson2 }, { lesson3 });
   return objeto;
 }
-console.log(concatenaObjetos(newObject));
+//console.log(concatenaObjetos(newObject));
 
 // Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
 const alunoTotal1 = lesson1.numeroEstudantes;
@@ -63,18 +63,34 @@ const valorChaveIndice = (objeto, number) => {
   return Object.values(objeto)[number];
 }
 
-console.log(valorChaveIndice(lesson3, 0));
+//console.log(valorChaveIndice(lesson3, 0));
 
-// Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
+// 8- Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
 const verificaPar = (objeto, key, value) => {
   let arrayRetorno = Object.entries(objeto);
-  for (let index = 0; index < arrayRetorno.length; index += 1){
+  for (let index = 0; index < arrayRetorno.length; index += 1) {
     console.log(arrayRetorno[index]);
-    if((arrayRetorno[index][0] === key) && (arrayRetorno[index][1] === value)) {
+    if ((arrayRetorno[index][0] === key) && (arrayRetorno[index][1] === value)) {
       return true
     }
   }
   return false
 }
 
-console.log(verificaPar(lesson3, 'materia', 'Português'));
+//console.log(verificaPar(lesson3, 'materia', 'Matemática'));
+
+// Bônus 1- Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+concatenaObjetos(newObject);
+
+const alunosAulaMatematica = (objeto) => {
+  let retornoFor = 0;
+  for (let index in objeto) {
+    if (objeto[index].materia === 'Matemática') {
+      retornoFor += objeto[index].numeroEstudantes;
+    }
+  }
+  return retornoFor;
+}
+
+
+console.log(alunosAulaMatematica(newObject))
