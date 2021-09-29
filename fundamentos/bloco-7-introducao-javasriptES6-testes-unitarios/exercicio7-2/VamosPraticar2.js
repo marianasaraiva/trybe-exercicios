@@ -56,7 +56,7 @@ const totalAlunos = (turma1, turma2, turma3) => {
   return turma1 + turma2 + turma3
 }
 
-// console.log(totalAlunos(alunoTotal1, alunoTotal2, alunoTotal3));
+console.log(totalAlunos(alunoTotal1, alunoTotal2, alunoTotal3));
 
 // 7- Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
 const valorChaveIndice = (objeto, number) => {
