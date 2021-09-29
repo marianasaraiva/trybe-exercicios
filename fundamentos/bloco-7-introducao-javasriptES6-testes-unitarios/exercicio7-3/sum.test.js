@@ -1,6 +1,6 @@
 const { sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate } = require("./sum");
 
-describe('testar a função sum', () => {
+describe('Testar a função sum', () => {
   it('deve retornar o reultado da soma', () => {
     // Teste se o retorno de sum(4, 5) é 9
     expect(sum(4, 5)).toEqual(9);
@@ -16,7 +16,7 @@ describe('testar a função sum', () => {
 })
 
 // 2 - A função myRemove(arr, item) recebe um array arr e retorna uma cópia desse array sem o elemento item caso ele exista no array
-describe('testar a função myRemove', () => {
+describe('Testar a função myRemove', () => {
   it('Deve retornar o resultado do array [ 1, 2, 4 ]', () => {
     // Verifique se a chamada myRemove([1, 2, 3, 4], 3) retorna o array esperado
     expect(myRemove([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
@@ -32,7 +32,7 @@ describe('testar a função myRemove', () => {
 })
 
 // A função myFizzBuzz(num) recebe um número num e retorna "fizzbuzz" se o número for divisível por 3 e 5 , retorna "fizz" se for divisível apenas por 3 , retorna "buzz" se divisível apenas por 5 , retorna o próprio número caso não seja divisível por 3 ou 5 e retorna false caso num não seja um número
-describe('testar a função myFizzBuzz', () => {
+describe('Testar a função myFizzBuzz', () => {
   it('Deve retornar fizzbuzz se divisivel por 5 e 3', () => {
     // Faça uma chamada com um número divisível por 3 e 5 e verifique se o retorno é o esperado
     expect(myFizzBuzz(15)).toEqual('fizzbuzz');
@@ -57,7 +57,11 @@ describe('testar a função myFizzBuzz', () => {
 
 // No Bloco 4 você desenvolveu um projeto para testar os seus conhecimentos em Javascript e lógica de programação: o Playground functions . Nos exercícios a seguir, você irá trabalhar com os testes para algumas funções que você criou! Aproveite para refatorá-las e usar todos os recursos que já aprendemos até aqui, como as Higher Order Functions e as features do Javascript ES6.
 // Para as funções encode e decode crie os seguintes testes em Jest:
-describe('testar a função encode e decode', () => {
+describe('Testar a função encode e decode', () => {
+  // verifica se a funcao esta definida
+  it('a função encode é definida', () => {
+    expect(encode).toBeDefined();
+  });
   it('Verifica se encode é função', () => {
     // Teste se encode e decode são funções;
     expect(typeof encode).toEqual('function');
@@ -76,6 +80,10 @@ describe('testar a função encode e decode', () => {
   it('Realizar troca de vogais por números', () => {
     // Teste se as demais letras/números não são convertidos para cada caso
     expect(encode('b,c,d,f,g')).toEqual('b,c,d,f,g');
+  });
+  // Teste se a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro.
+  it('Checa se o retorno da função tem o mesmo número de caracteres', () => {
+    expect(encode('Mariana').length).toEqual(7);;
   });
 })
 
