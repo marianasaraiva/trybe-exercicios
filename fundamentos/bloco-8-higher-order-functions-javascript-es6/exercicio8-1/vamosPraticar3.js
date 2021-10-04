@@ -13,11 +13,11 @@ const resultado = (gabarito, respostas, func) => {
   return `Resultado final: ${contador} corretas`;
 }
 
-console.log(resultado(RIGHT_ANSWERS, STUDENT_ANSWERS, (gabarito, respostas) => {
-  if(gabarito === respostas) {
+console.log(resultado(RIGHT_ANSWERS, STUDENT_ANSWERS, (correto, estudante) => {
+  if(correto === estudante) {
     return 1;
   } 
-  if (gabarito === 'N.A'){
+  if (correto === 'N.A'){
     return 0;
   }
   return -0.5;
