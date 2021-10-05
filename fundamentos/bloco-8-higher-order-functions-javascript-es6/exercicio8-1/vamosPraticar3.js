@@ -4,21 +4,23 @@
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const resultado = (gabarito, respostas, func) => {
+const resultado = (RIGHT_ANSWERS, STUDENT_ANSWERS, verificarRespostas) => {
+  let contar = verificarRespostas(RIGHT_ANSWERS, STUDENT_ANSWERS);
+  return contar;
+};
+
+const verificarRespostas = (RIGHT_ANSWERS, STUDENT_ANSWERS)=> {
   let contador = 0;
-  for (let index = 0; index < gabarito.length; index += 1) {
-    const returnFunc = func(gabarito[index], respostas[index]);
-    contador += returnFunc
+  for (let index = 0; index <= RIGHT_ANSWERS.length; index += 1) {
+    if(RIGHT_ANSWERS[index] === STUDENT_ANSWERS[index]) {
+      contador += 1;
+    } else if (RIGHT_ANSWERS[index] === 'N.A'){
+      contador += 0;
+    } else {
+      contador += -0.5;
+    } 
   }
   return `Resultado final: ${contador} corretas`;
 }
 
-console.log(resultado(RIGHT_ANSWERS, STUDENT_ANSWERS, (correto, estudante) => {
-  if(correto === estudante) {
-    return 1;
-  } 
-  if (correto === 'N.A'){
-    return 0;
-  }
-  return -0.5;
-}));
+console.log(resultado(RIGHT_ANSWERS, STUDENT_ANSWERS, verificarRespostas));
