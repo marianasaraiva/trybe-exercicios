@@ -63,20 +63,12 @@ const books = [
   },
 ];
 
+// Adicione o código do exercício aqui:
+// 6 - Faça uma função que retorne true , se algum livro foi lançado na década de 80, e false , caso contrário.
+const expectedResult = true;
 
-const expectedResult = {
-  author: {
-    birthYear: 1948,
-    name: 'George R. R. Martin',
-  },
-  genre: 'Fantasia',
-  id: 1,
-  name: 'As Crônicas de Gelo e Fogo',
-  releaseYear: 1991,
+const someBookWasReleaseOnThe80s = () => {
+  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear < 1990);
 };
 
-const getNamedBook = () => {
-  return books.find((book) => book.name.length === 26);
-}
-
-assert.deepStrictEqual(getNamedBook(), expectedResult);
+assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
