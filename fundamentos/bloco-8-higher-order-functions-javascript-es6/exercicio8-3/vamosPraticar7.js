@@ -63,19 +63,12 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
-const expectedResult = [
-  'O Senhor dos Anéis',
-  'Fundação',
-  'O Chamado de Cthulhu',
-];
+const expectedResult = 'O Senhor dos Anéis';
 
-
-// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
-function oldBooks() {
-  const bookRelease = books.filter((book) => ((2021 - book.releaseYear) >= 60));
-  const nameBook = bookRelease.map((nome) => nome.name);
-  return nameBook;
-};
-
-assert.deepStrictEqual(oldBooks(), expectedResult); 
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+// Dica: cada inicial termina com um ponto.
+function authorWith3DotsOnName() {
+  const nameAuthor =  books.find((nome) => (nome.author.name[1] === '.') && (nome.author.name[4] === '.') && (nome.author.name[7] === '.') );
+  return nameAuthor.name;
+ }
+ assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
