@@ -1,15 +1,4 @@
-// Soft Skills Assertividade:
-// 1- V Um homem apareceu após o proprietário ter apagado a luz de sua loja.
-// 2- ? O ladrão era um homem.
-// 3- V O homem não exigiu dinheiro.
-// 4- V O homem que abriu a caixa registradora era o proprietário.
-// 5- ? O proprietário da loja esvaziou o conteúdo da caixa registradora.
-// 6- V Após ter esvaziado o conteúdo da caixa registradora, o homem fugiu.
-// 7- V A história refere-se a uma série de acontecimentos onde se faz referência a apenas 3 pessoas: o proprietário da loja, um homem que pediu dinheiro e um membro da força policial.
-// 8- V Os seguintes acontecimentos da loja são verdadeiros: alguém exigiu dinheiro, uma caixa registradora foi aberta, seu conteúdo foi esvaziado e um homem saiu correndo.
-
-// const assert = require('assert');
-
+const assert = require('assert');
 const books = [
   {
     id: 1,
@@ -72,19 +61,17 @@ const books = [
     releaseYear: 1928,
   },
 ];
-
-// Adicione o código do exercício aqui:
+//  Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia
 const expectedResult = [
-  'O Senhor dos Anéis',
-  'Fundação',
-  'O Chamado de Cthulhu',
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
 ];
 
-
-// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
-function oldBooks() {
-  // escreva seu código aqui
+function fantasyOrScienceFictionAuthors() {
+  const filtrados = books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
+  return filtrados.map((nome) => (nome.author.name)).sort();  
 }
 
-console.log(oldBooks());
-
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);

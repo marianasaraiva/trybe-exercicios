@@ -101,7 +101,9 @@ const nameAndAge = () => {
   idade = books.map((book) => book.releaseYear - book.author.birthYear);
   // console.log(idade);
 
-  return autores.map((autor,index) => ( { age: idade [index], author: autor})).sort((a,b )=> a.age - b.age);
+  // return autores.map((autor,index) => {return {age: idade [index], author: autor}}).sort((a,b )=> a.age - b.age);
+
+   return autores.map((autor,index) => ({age: idade [index], author: autor})).sort((a,b )=> a.age - b.age);
 
 }
 

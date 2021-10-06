@@ -1,14 +1,4 @@
-// Soft Skills Assertividade:
-// 1- V Um homem apareceu após o proprietário ter apagado a luz de sua loja.
-// 2- ? O ladrão era um homem.
-// 3- V O homem não exigiu dinheiro.
-// 4- V O homem que abriu a caixa registradora era o proprietário.
-// 5- ? O proprietário da loja esvaziou o conteúdo da caixa registradora.
-// 6- V Após ter esvaziado o conteúdo da caixa registradora, o homem fugiu.
-// 7- V A história refere-se a uma série de acontecimentos onde se faz referência a apenas 3 pessoas: o proprietário da loja, um homem que pediu dinheiro e um membro da força policial.
-// 8- V Os seguintes acontecimentos da loja são verdadeiros: alguém exigiu dinheiro, uma caixa registradora foi aberta, seu conteúdo foi esvaziado e um homem saiu correndo.
-
-// const assert = require('assert');
+const assert = require('assert');
 
 const books = [
   {
@@ -86,5 +76,4 @@ function oldBooks() {
   // escreva seu código aqui
 }
 
-console.log(oldBooks());
-
+assert.deepStrictEqual(oldBooks(), expectedResult);
