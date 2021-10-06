@@ -67,8 +67,21 @@ const books = [
 // 7 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
 const expectedResult = false;
 
-const authorUnique = () => {
-  // escreva seu código aqui
+// Tales Coelho
+// const authorUnique = () => {
+//   let exist = true;
+//   const arr = [];
+//   books.forEach(element => arr.find(a => a === element.author.birthYear) ? exist = false : arr.push(element.author.birthYear));
+//   return exist;
+// }
+
+function authorUnique() {
+  console.log()
+  return books.every((book) =>
+    !books.some((bookSome) =>
+      (bookSome.author.birthYear === book.author.birthYear)
+      && (bookSome.author.name !== book.author.name)));
 }
+
 
 assert.strictEqual(authorUnique(), expectedResult);
