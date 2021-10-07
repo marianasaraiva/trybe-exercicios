@@ -64,6 +64,17 @@ const books = [
 // 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 const expectedResult = 43;
 
-function averageAge() {
-  // escreva seu código aqui
+const averageAge = () => {
+  const age = books.reduce((acc, array) => acc + (array.releaseYear - array.author.birthYear), 0);
+ return age / books.length;
 }
+console.log(averageAge());
+
+// Lógica estudo em grupo:
+// function averageAge() {
+//   const age = books.map((book) => {
+//     return (book.releaseYear - book.author.birthYear)
+//   })
+//   const media = age.reduce((acc, age) => acc + age)
+//   return media / books.length
+// }
