@@ -66,7 +66,7 @@ const books = [
 const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
 function flatten(books) {
-  const nomes = books.reduce((acc, arr) => `${acc} ${arr.author.name}, `, '');
+  const nomes = books.reduce((acc, book) => `${acc} ${book.author.name}, `, '');
   // usar o replace() para trocar o ultimo elemento da string (virgula) e colocar o ponto final(.)
   // O trim() retira os espaços em branco que estão sobrando.
   return nomes.trim().replace(/.$/, '.');

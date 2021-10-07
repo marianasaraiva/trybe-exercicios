@@ -78,7 +78,7 @@ const expectedResult = {
 
 // Lógica grupo de estudos
 const longestNamedBook = ()=> {
-  return books.reduce((acc, book) => book.name.length > acc ? book : acc);
+  return books.reduce((acc, book) => book.name.length > acc.name.length ? book : acc);
 }
 
 console.log(longestNamedBook());
