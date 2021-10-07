@@ -76,6 +76,9 @@ const expectedResult = {
   releaseYear: 1991,
 };
 
-function longestNamedBook() {
-  // escreva seu código aqui
+// Lógica grupo de estudos
+const longestNamedBook = ()=> {
+  return books.reduce((acc, book) => book.name.length > acc ? book : acc);
 }
+
+console.log(longestNamedBook());
