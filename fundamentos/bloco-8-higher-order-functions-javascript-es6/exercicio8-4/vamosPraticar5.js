@@ -9,13 +9,15 @@ const names = [
 // usar filter ou utilizar outro reduce
 
 function containsA() {
-  return names.reduce((acumulado, nome)=> 
-  acumulado + nome.split('').reduce((acc, name)=> {
-      if (name === 'a' || name ==='A'){
-        return acc += 1;
-      }
-      return acc;
-    }, 0), 0);
+  const teste = names.reduce((acumulado, nome)=> 
+  acumulado + nome.split('').reduce((acc, caracter)=> {
+    if (caracter === 'a' || caracter ==='A'){
+      return acc += 1;
+    }
+    return acc;
+  }, 0), 0);
+  
+  return teste
 }
 
 console.log(containsA());
