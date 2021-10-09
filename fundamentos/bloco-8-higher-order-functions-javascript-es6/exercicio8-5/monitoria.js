@@ -37,15 +37,24 @@ const cities = [
   { state: 'CE', name: 'Jericoacoara', region: 'NE' },
 ];
 
-const mapCities = cities.map((city) => {
+const mapCities = (includeRegionNames) => {
+  const cidades = cities.map((city) => {
     const estados = states.find((state) => state.short === city.state);
     const regiao = regions.find((region) => region.short === city.region);
-      
-    return {
+    if(includeRegionNames) {
+      return {
         name: city.name,
         estado: estados.name,
         regiao: regiao.name,
+      } 
+    } else {
+      return {
+        name: city.name,
+        estado: estados.name,
       }
-});
+    }
+  });
+  return cidades;
+}
 
-console.log(mapCities);
+console.log(mapCities(true));
