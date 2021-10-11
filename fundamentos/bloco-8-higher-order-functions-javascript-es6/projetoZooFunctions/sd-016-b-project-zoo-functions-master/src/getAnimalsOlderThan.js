@@ -3,11 +3,12 @@ const data = require('../data/zoo_data');
 // usei a HOF find para encontrar o nome do animal e a HOF every para verificar se todas as idades do array residents contido em species atendia ao requisitito idade minima.
 function getAnimalsOlderThan(animal, age) {
   const { species } = data;
-  return species.find((spec) => spec.name === animal).residents.every((anim) => anim.age > age);
+  // console.log(species);
+  return species.find((spec) => spec.name === animal).residents.every((anim) => anim.age >= age);
 }
 
 console.log(getAnimalsOlderThan('otters', 7));
-// console.log(getAnimalsOlderThan('penguins', 10));
+console.log(getAnimalsOlderThan('penguins', 10));
 module.exports = getAnimalsOlderThan;
 
 // 2. Implemente a função getAnimalsOlderThan
