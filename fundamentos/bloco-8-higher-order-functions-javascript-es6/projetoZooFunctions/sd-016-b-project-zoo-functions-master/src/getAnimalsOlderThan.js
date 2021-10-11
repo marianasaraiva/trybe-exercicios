@@ -6,7 +6,7 @@ function getAnimalsOlderThan(animal, age) {
   return species.find((spec) => spec.name === animal).residents.every((anim) => anim.age > age);
 }
 
-// console.log(getAnimalsOlderThan('otters', 7));
+console.log(getAnimalsOlderThan('otters', 7));
 // console.log(getAnimalsOlderThan('penguins', 10));
 module.exports = getAnimalsOlderThan;
 
