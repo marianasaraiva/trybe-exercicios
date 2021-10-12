@@ -26,7 +26,7 @@ function getRelatedEmployees(managerId) {
     // insere o erro se o id pesquisado nao seja de um gerente.
     throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
   }
-  // utilizo a HOF filter para filtrar o array employees e selecionar o array managers com a HOF some se o funcionário possui o d do Gerente e assim, utilizo a HOF map para retornar o nome do Gerente.
+  // utilizo a HOF filter para filtrar o array employees e selecionar o array managers com a HOF some e econtrar o ID do gerente e assim, utilizo a HOF map para retornar o nome dos funcionários que o gerente é responsável.
   return employees.filter((employee) => employee.managers
     .some((value) => value === managerId))
     .map((names) => `${names.firstName} ${names.lastName}`);

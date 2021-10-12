@@ -1,39 +1,39 @@
 const data = require('../data/zoo_data');
 
 const { species } = data;
-// species é um array de objetos, por isso podemos tratar com as HOFs, porém temos arrays dentro destes objetos para desafiar nossa manipulação.
-// console.log(species);
 
-// Parte 1: quando a função não recebe parametro
+const teste = () => {
+  const objeto = species.reduce((acc, specie) => {
+    acc[specie.name] = specie.residents.length;
+    return acc;
+  }, {});
+  return objeto;
+};
+
+const teste2 = (animal) => species.reduce((sum, spec) => ((spec.name === animal.specie)
+  ? (spec.residents) : (sum)), 0).length;
+
+const teste3 = (animal) => {
+  const ani = species.reduce((sum, spec) => ((spec.name === animal.specie)
+    ? (spec.residents) : (sum)), 0);
+  const animals = ani.reduce((acc, sexo) => ((sexo.sex === animal.sex)
+    ? (acc + 1) : (acc)), 0);
+  return animals;
+};
+
 function countAnimals(animal) {
-  if (animal === undefined) {
-    // Utilizando a HOF reduce para reduzir o array para objeto no formato desejado.
-    const objeto = species.reduce((previousValue, currentValue) => {
-      previousValue[currentValue.name] = currentValue.residents.length;
-      return previousValue;
-    }, {});
-    return objeto;
+  if (animal === undefined) { // Utilizando a HOF reduce para reduzir o array para objeto no formato desejado.
+    return teste();
   }
+  if (Object.values(animal).length === 1) { // Usei a HOF reduce para informar o numero de animais por nome e o length para dizer o tamanho do array.
+    return teste2(animal);
+  }
+  return teste3(animal);
 }
-console.log(countAnimals());
 
-// // Parte II quando a função recebe o animal e formato de objeto como paraetro.
-// function countAnimals({ specie: animal }) {
-//   // Usei a HOF reduce para informar o numero de animais por nome e o length para dizer o tamanho do array.
-//   const animaisQtd = species.reduce((sum, specie) => ((specie.name === animal) ? (specie.residents) : (sum)), 0);
-//   console.log(animaisQtd);
-//   return animaisQtd.length;
-// }
+console.log(countAnimals());
 // console.log(countAnimals({ specie: 'giraffes' }));
 // console.log(countAnimals({ specie: 'penguins' }));
-
-// // Parte III: quando a função recebe dois parametros
-// function countAnimals({ specie: animal, sex: teste }) {
-//   // usei o reduce para somar os animais por sexo:
-//   const ani = species.reduce((sum, spec) => ((spec.name === animal) ? (spec.residents) : (sum)), 0);
-//   const animals = ani.reduce((acc, sexo) => ((sexo.sex === teste) ? (acc + 1) : (acc)), 0);
-//   return animals;
-// }
 // console.log(countAnimals({ specie: 'bears', sex: 'female' })); // 0
 // console.log(countAnimals({ specie: 'elephants', sex: 'male' })); // 2
 
