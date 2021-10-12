@@ -31,7 +31,7 @@ function countAnimals(animal) {
   return teste3(animal);
 }
 
-console.log(countAnimals());
+// console.log(countAnimals());
 // console.log(countAnimals({ specie: 'giraffes' }));
 // console.log(countAnimals({ specie: 'penguins' }));
 // console.log(countAnimals({ specie: 'bears', sex: 'female' })); // 0
