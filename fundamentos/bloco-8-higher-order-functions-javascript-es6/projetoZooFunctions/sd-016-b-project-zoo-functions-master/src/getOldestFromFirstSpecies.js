@@ -1,8 +1,7 @@
 const data = require('../data/zoo_data');
 
 function getOldestFromFirstSpecies(id) {
-  const teste = data.employees.find((func) => func.id === id).responsibleFor
-    .find((animal) => animal[0]);
+  const teste = data.employees.find((func) => func.id === id).responsibleFor[0];
   const animalObj = data.species.find((specie) => specie.id === teste).residents;
   const filtro = Object.values(animalObj.sort((a, b) => a.age - b.age)[animalObj.length - 1]);
   return filtro;

@@ -14,8 +14,7 @@ const teste2 = (animal) => species.reduce((sum, spec) => ((spec.name === animal.
   ? (spec.residents) : (sum)), 0).length;
 
 const teste3 = (animal) => {
-  const ani = species.reduce((sum, spec) => ((spec.name === animal.specie)
-    ? (spec.residents) : (sum)), 0);
+  const ani = species.find((specie) => specie.name === animal.specie).residents;
   const animals = ani.reduce((acc, sexo) => ((sexo.sex === animal.sex)
     ? (acc + 1) : (acc)), 0);
   return animals;
@@ -31,10 +30,10 @@ function countAnimals(animal) {
   return teste3(animal);
 }
 
-// console.log(countAnimals());
+console.log(countAnimals());
 // console.log(countAnimals({ specie: 'giraffes' }));
 // console.log(countAnimals({ specie: 'penguins' }));
-// console.log(countAnimals({ specie: 'bears', sex: 'female' })); // 0
+console.log(countAnimals({ specie: 'bears', sex: 'female' })); // 0
 // console.log(countAnimals({ specie: 'elephants', sex: 'male' })); // 2
 
 module.exports = countAnimals;
