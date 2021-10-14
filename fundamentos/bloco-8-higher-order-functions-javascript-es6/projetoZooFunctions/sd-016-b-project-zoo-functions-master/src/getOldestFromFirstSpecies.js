@@ -7,8 +7,6 @@ function getOldestFromFirstSpecies(id) {
   return filtro;
 }
 
-// console.log(getOldestFromFirstSpecies(burlId));
-
 module.exports = getOldestFromFirstSpecies;
 
 // 9. Implemente a função getOldestFromFirstSpecies

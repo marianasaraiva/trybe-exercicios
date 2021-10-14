@@ -3,6 +3,7 @@ const data = require('../data/zoo_data');
 const { species, hours } = data;
 
 const diaDaSemana = Object.keys(hours);
+console.log(diaDaSemana);
 // Auxilio Tales Coelho monitoria para confecçao do objeto
 const geralZoo = () => {
   const objeto = diaDaSemana.reduce((acc, elem) => {
@@ -33,5 +34,7 @@ function getSchedule(scheduleTarget) {
   }
   return species.find((teste) => teste.name === scheduleTarget).availability;
 }
+
+console.log(getSchedule());
 
 module.exports = getSchedule;
