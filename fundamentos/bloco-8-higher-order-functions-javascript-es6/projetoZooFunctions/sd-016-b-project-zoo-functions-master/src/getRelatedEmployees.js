@@ -1,18 +1,14 @@
-const data = require('../data/zoo_data');
-
-// console.log(data);
-const { employees } = data;
-// console.log(data.employees);
+// Questão discutida em grupo de estudos.
+const { employees } = require('../data/zoo_data');
 
 const stephanieId = '9e7d4524-363c-416a-8759-8aa7e50c0992';
 const olaId = 'fdb2543b-5662-46a7-badc-93d960fdc0a8';
 const burlId = '0e7b460e-acf4-4e17-bcb3-ee472265db83';
-// const managers = [stephanieId, olaId, burlId];
 
 function isManager(id) {
-  // Verifica se o id informado é de gerente.
+  // Condiçao para verificar se o id informado como parametro corresponde ao de gerente. O teste informa quais são os gerentes -> const managers = [stephanieId, olaId, burlId];
   if (id === stephanieId || id === olaId || id === burlId) {
-    // usei a HOF some par buscar o Id informado acima.
+    // usei a HOF some par buscar o Id informado acima, retornando true.
     return employees.some((manager) => manager.id === id);
   }
   return false;
@@ -22,16 +18,17 @@ function isManager(id) {
 function getRelatedEmployees(managerId) {
   // Guarda o resultado da função em uma variavel.
   const resultado = isManager(managerId);
+  // condição para verificar se o id passado ao invocar a função é um gerente, e caso seja falso, retornar o erro.
   if (resultado !== true) {
     // insere o erro se o id pesquisado nao seja de um gerente.
     throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
   }
-  // utilizo a HOF filter para filtrar o array employees e selecionar o array managers com a HOF some e econtrar o ID do gerente e assim, utilizo a HOF map para retornar o nome dos funcionários que o gerente é responsável.
+  // utilizo a HOF filter para filtrar o array employees e acessar o  array managers com a HOF some e verificar se o ID do gerente  é igual ao parametro informado na função e por último, utilizo a HOF map para retornar um array comnome dos funcionários que o gerente é responsável.
   return employees.filter((employee) => employee.managers
     .some((value) => value === managerId))
     .map((names) => `${names.firstName} ${names.lastName}`);
 }
-console.log(getRelatedEmployees(stephanieId));
+// console.log(getRelatedEmployees(stephanieId));
 
 module.exports = { isManager, getRelatedEmployees };
 

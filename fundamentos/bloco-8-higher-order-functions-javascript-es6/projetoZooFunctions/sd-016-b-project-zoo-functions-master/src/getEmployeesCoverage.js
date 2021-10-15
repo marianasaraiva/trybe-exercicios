@@ -1,6 +1,5 @@
-const data = require('../data/zoo_data');
-
-const { species, employees } = data;
+// Discutido questão em grupo de estudos para entender a lógica.
+const { species, employees } = require('../data/zoo_data');
 
 const lionId = '0938aa23-f153-4937-9f88-4858b24d6bce';
 const ottersId = '533bebf3-6bbe-41d8-9cdf-46f7d13b62ae';
@@ -14,7 +13,11 @@ const stephanieId = '9e7d4524-363c-416a-8759-8aa7e50c0992';
 const olaId = 'fdb2543b-5662-46a7-badc-93d960fdc0a8';
 const burlId = '0e7b460e-acf4-4e17-bcb3-ee472265db83';
 
+// console.log(getOldestFromFirstSpecies(burlId));
+
+// Confecção da função para gerar um array de objetos para armazenar as informações do requisito e posteriormente filtrar conforme a entrada de parametros.
 const objetoRetorno = () => {
+  // Utilizo a HOF map no array empregados para criar um array contendo o objeto que está na const arr. O id é obtido de forma direta chamar a chave do objeto. O fullName é obtido usando o templante literals para reunir o first name e o full name. O species é obtido utilizando a HOF map para criar um array onde retorna o nome dos animais, quando utilizado junto com a HOF find pelo id e retornando o nome da espécie. o locations utiliza a mesma lógica acima, porém retornamos o local.
   const arrayResultado = employees.map((objeto) => {
     const arr = {
       id: objeto.id,
@@ -29,7 +32,7 @@ const objetoRetorno = () => {
   return arrayResultado;
 };
 
-// console.log(objetoRetorno());
+console.log(objetoRetorno());
 
 function getEmployeesCoverage(parametro) {
   if (parametro === undefined) return objetoRetorno();

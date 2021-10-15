@@ -1,9 +1,17 @@
 const data = require('../data/zoo_data');
 
-// console.log(data.prices.child);
+// const entrants = [
+//   { name: 'Lara Carvalho', age: 5 },
+//   { name: 'Frederico Moreira', age: 5 },
+//   { name: 'Pedro Henrique Carvalho', age: 5 },
+//   { name: 'Maria Costa', age: 18 },
+//   { name: 'Núbia Souza', age: 18 },
+//   { name: 'Carlos Nogueira', age: 50 },
+// ];
 
+// Função para verificar a quantidade de pessoas por idade.
 function countEntrants(entrants) {
-  // usei a HOF filter para filtrar o array fornecido como parametro, orientei as condicionais e busquei o tamanho dele para retornar o número de itens que corresponde ao numero de visitante por idade.
+  // usei a HOF filter para filtrar o array fornecido como parametro, realizei a regra de negócio das condicionais e busquei o tamanho do array com o length para retornar o número de itens que corresponde ao numero de visitante por idade.
   const child = entrants.filter((person) => person.age < 18).length;
   const adult = entrants.filter((person) => person.age >= 18 && person.age < 50).length;
   const senior = entrants.filter((person) => person.age >= 50).length;
@@ -13,18 +21,17 @@ function countEntrants(entrants) {
 // console.log(countEntrants(entrants));
 
 function calculateEntry(entrants) {
-  // Nenhum argumento passado retorna false -> !entrants; objeto vazio -> Object.values(entrants).length;
+  // Condição para verificar se nenhum argumento passado sinaliza false -> !entrants, portanto retorna 0 como setado no return deste if; objeto vazio -> Object.values(entrants).length, também retornando 0.;
   if (!entrants || Object.values(entrants).length === 0) return 0;
-  // armazena o retorno da funçao em uma variavel para obter o objeto e manipular para obter os values e assim efetuar a multiplicação.
+  // const numeroVisitantes armazena o retorno da funçao em uma variavel para usar o nome da constante e acessar o objeto e consequentemente os values para efetuar a multiplicação com os values do objeto Prices.
   const numeroVisitante = countEntrants(entrants);
-  // console.log(numeroVisitante);
   const numeroChild = numeroVisitante.child * data.prices.child;
   const numeroAdult = numeroVisitante.adult * data.prices.adult;
   const numeroSenior = numeroVisitante.senior * data.prices.senior;
   return numeroChild + numeroAdult + numeroSenior;
 }
 
-// console.log(calculateEntry(entrants));
+console.log(calculateEntry(entrants));
 
 module.exports = { calculateEntry, countEntrants };
 
