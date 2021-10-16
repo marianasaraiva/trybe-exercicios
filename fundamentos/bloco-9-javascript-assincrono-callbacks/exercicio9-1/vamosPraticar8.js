@@ -31,9 +31,17 @@ function getPokemonDetails(filter, callback) {
     callback(null, messageFromProfOak);
   }, 2000);
 }
+// getPokemonDetails('Bulbasaur');
 
-getPokemonDetails();
+console.log(getPokemonDetails(
+  (pokemon) => pokemon.name === 'Bulbasaur',
+  (error, message) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(message);
+    }
+  }
+));
 
-module.exports = {
-  getPokemonDetails, pokemons,
-};
+module.exports = getPokemonDetails;
