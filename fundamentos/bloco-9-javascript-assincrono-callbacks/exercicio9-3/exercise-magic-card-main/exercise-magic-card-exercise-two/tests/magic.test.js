@@ -1,6 +1,8 @@
 const { getMagicCard } = require('../src/magic.js');
 const favoriteCards = require('../data/favoriteCards.js');
 
+
+
 const retrievesFavoriteCards = () => {
   // implemente sua função aqui
 }
@@ -8,7 +10,7 @@ const retrievesFavoriteCards = () => {
 describe(' Testa a função getMagicCard', () => { 
 
   it('Testa se um novo card é adicionado a cada execução', async () => {
-    expect.assertions();
+    expect.assertions(3);
     await getMagicCard('130553');
 
     // implemente seus testes aqui
