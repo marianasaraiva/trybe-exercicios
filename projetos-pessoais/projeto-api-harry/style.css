@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./imagem/hogwarts.jpeg);
+  background-repeat: no-repeat;
+  font-size: 1.3em;
+}
+
+.container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+h2 {
+  justify-content: space-around;
+  font-size: 1.5em;
+}
+
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  width: 700px;
+}
+
+.align-search {
+  color: white;
+  display: block;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.input-character {
+  width: 500px;
+  text-align: center;
+}
+
+.button-character {
+  text-transform: uppercase;
+  color: white;
+  background-color: rgb(102, 10, 10);
+  width: 520px;
+}
+
+.cards-character {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  border: 2px solid rgb(248, 243, 243);
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  margin: 30px;
+  width: 200px;
+}
+
+.item .item_name{
+  text-transform: uppercase;
+  color: rgb(102, 10, 10);
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.item .item_house {
+  color: rgb(173, 27, 27);
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.item .item_patronus {
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.item .image {
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
