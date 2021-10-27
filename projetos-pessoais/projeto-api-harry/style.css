@@ -114,4 +114,9 @@ h2 {
   width: 100px;
   height: 100px;
   padding: 10px;
+  opacity: 0.8em;
+}
+
+.item .image:hover {
+  opacity: 1em;
 }
