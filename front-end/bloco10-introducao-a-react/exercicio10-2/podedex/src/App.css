@@ -47,7 +47,6 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-
 }
 
 .section {
@@ -60,4 +59,10 @@
   border-radius: 8px;
   margin-right: 24px;
   margin-bottom: 24px;
+  opacity: 0.8;
+}
+
+.section:hover {
+  opacity: 1;
+  background-color: rgb(231, 209, 108);
 }
