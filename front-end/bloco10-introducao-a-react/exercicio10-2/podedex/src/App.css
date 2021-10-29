@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.div-Principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(252, 234, 153);
+  padding: 12px;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
