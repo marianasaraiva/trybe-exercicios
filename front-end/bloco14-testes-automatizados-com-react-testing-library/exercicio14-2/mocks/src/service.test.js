@@ -51,7 +51,7 @@ describe('Exercicio 3', () => {
 
 describe('Exercicio 4', () => {
   test('Parte 1: mockando função para receber um parâmetro e retornar em caixa baixa', () => {
-    // No course explica que precisa usar o SpyOn para esetar/restaurar, mas não consegui implementar.
+    // No course explica que precisa usar o SpyOn para Resetar/restaurar, mas não consegui implementar.
     service.upperCaseString = jest.fn().mockImplementation((a) => a.toLowerCase());
 
     expect(service.upperCaseString('UPPERCASE')).toBe('uppercase');
