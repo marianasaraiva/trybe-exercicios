@@ -4,7 +4,12 @@ export default class Celula extends Component {
   render() {
     return (
       <div>
-        Células
+        <input
+        // id={ id }
+        onClick={ this.createMatriz }
+        onChange={this.handleChange}
+        />
+        
       </div>
     )
   }
