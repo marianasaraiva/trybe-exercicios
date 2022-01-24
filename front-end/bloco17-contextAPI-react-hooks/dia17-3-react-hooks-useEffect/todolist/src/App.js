@@ -5,7 +5,6 @@ import InputTodo from './component/InputTodo';
 import ListTodo from './component/ListTodo';
 
 function App() {
-
   return (
     <main>
       <TodoProvider>
