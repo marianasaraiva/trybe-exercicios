@@ -24,7 +24,7 @@ function InputTodo({ addTodo }) {
           id="newTodo"
         />
       </label>
-      <button onClick={handleClick}>Acicionar tarefa</button>
+      <button onClick={handleClick}>Adicionar tarefa</button>
     </section>
   )
 }
