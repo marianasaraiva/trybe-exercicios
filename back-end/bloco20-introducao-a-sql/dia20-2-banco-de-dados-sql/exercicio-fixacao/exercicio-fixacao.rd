@@ -1,4 +1,4 @@
-Parte 01: 
+Parte 01:  SELECT
 1- Monte uma query que exiba seu nome na tela;
 2- Monte uma query que exiba seu nome, sobrenome, cidade natal e idade na tela;
 3- Monte uma query que, além de exibir todas as informações já mencionadas, identifique cada coluna usando o AS , que é chamado de alias na linguagem SQL ( alias é como um apelido no português);
@@ -13,16 +13,30 @@ SELECT 13 * 8;
 SELECT now() AS 'Data Atual';
 
 
-Parte 02:
+Parte 02: SELECT
 1- Escreva uma query que selecione todas as colunas da tabela city ;
 2- Escreva uma query que exiba apenas as colunas first_name e last_name da tabela customer ;
 3- Escreva uma query que exiba todas as colunas da tabela rental ;
 4- Escreva uma query que exiba o título, a descrição e a data de lançamento dos filmes registrados na tabela film ;
 5- Utilize o SELECT para explorar todas as tabelas do banco de dados.
 
-Respostas:
+Respostas: 
 SELECT * FROM sakila.city;
 SELECT first_name,last_name FROM sakila.customer;
 SELECT * FROM sakila.rental;
 SELECT title,description,release_year FROM sakila.film;
 SELECT * FROM sakila;
+
+PARTE 03: CONCAT
+Respostas:
+SELECT CONCAT(title, ' ', release_year) AS 'Lançamento do Filme' FROM sakila.film;
+SELECT CONCAT(title, ' ', rating) AS Classificação FROM sakila.film;
+SELECT CONCAT(address, ' ', district) AS Endereço FROM sakila.address;
+
+PARTE 04: DISTINCT
+Repostas:
+SELECT DISTINCT Nome, Idade FROM Alunos;
+SELECT DISTINCT Nome FROM Alunos;
+SELECT DISTINCT Idade FROM Alunos;
+
+PARTE 05: COUNT
