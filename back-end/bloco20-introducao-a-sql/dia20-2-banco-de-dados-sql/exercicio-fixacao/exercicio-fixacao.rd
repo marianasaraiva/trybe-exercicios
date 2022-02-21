@@ -40,3 +40,39 @@ SELECT DISTINCT Nome FROM Alunos;
 SELECT DISTINCT Idade FROM Alunos;
 
 PARTE 05: COUNT
+RESPOSTAS: 
+SELECT COUNT(*) FROM sakila.staff;
+SELECT COUNT(first_name) FROM sakila.staff;
+SELECT COUNT(email) FROM sakila.staff;
+
+PARTE 06: LIMITE
+RESPOSTA:
+SELECT * FROM sakila.rental LIMIT 10;
+
+PARTE 07: OFFSET
+RESPOSTA:
+SELECT * FROM sakila.actor LIMIT 10 OFFSET 5;
+
+PARTE 08: ORDERBY
+RESPOSTA:
+SELECT * FROM sakila.address ORDER BY district ASC, address DESC;
+
+PARTE 09: CONDENSANDO OS CONHECIMENTOS:
+table sakila.film:
+SELECT * FROM sakila.film;
+SELECT title, release_year, rating FROM sakila.film;
+SELECT COUNT(*) FROM sakila.film;
+
+table sakila.actor:
+SELECT DISTINCT first_name, last_name FROM sakila.actor ORDER BY last_name DESC;
+SELECT COUNT(DISTINCT first_name, last_name) FROM sakila.actor ORDER BY last_name DESC;
+SELECT DISTINCT first_name, last_name FROM sakila.actor ORDER BY first_name ASC, last_name DESC;
+
+table sakila.language:
+SELECT * FROM sakila.language LIMIT 5 OFFSET 1;
+
+table sakila.film:
+SELECT title, release_year, length, rating, replacement_cost FROM sakila.film ORDER BY length DESC, replacement_cost ASC LIMIT 20;
+
+
+
