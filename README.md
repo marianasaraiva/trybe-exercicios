@@ -41,8 +41,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
-- [ ] 5-5: _[Projeto - Arte com Pixels]()_
-- [ ] 5-6: _[Projeto - Lista de tarefas]()_
+- [x] 5-5: _[Projeto - Arte com Pixels](https://github.com/marianasaraiva/trybe-project-pixels-art)_
+- [x] 5-6: _[Projeto - Lista de tarefas](https://github.com/marianasaraiva/trybe-project-todo-list)_
 
 ##### Bloco 6: HTML & CSS avançado
 
@@ -51,7 +51,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 6-3: _CSS Flexbox - Part 1_
 - [x] 6-4: _CSS Flexbox - Part 2_
 - [x] 6-5: _CSS Responsivo - Mobile First_
-- [ ] 6-6: _[Projeto - Trybewarts]()_
+- [x] 6-6: _[Projeto - Trybewarts](https://github.com/marianasaraiva/trybe-project-trybewarts)_
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
@@ -74,7 +74,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 9-1: _JavaScript Assíncrono e Callbacks_
 - [x] 9-2: _JavaScript Promises_
 - [x] 9-3: _Jest - Testes Assíncronos_
-- [ ] 9-3: _[Projeto - Carrinho de Compras]()_
+- [x] 9-3: _[Projeto - Carrinho de Compras](https://github.com/marianasaraiva/trybe-project-shopping-cart)_
 
 ## Desenvolvimento Front-end :white_check_mark:
 
@@ -82,7 +82,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [x] 10-1: _'Hello, world!' no React!_
 - [x] 10-2: _Componentes React_
-- [ ] 10-3: _[Projeto - Sistema Solar]()_
+- [x] 10-3: _[Projeto - Sistema Solar](https://github.com/marianasaraiva/trybe-project-solar-system)_
 
 ##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
 
@@ -115,7 +115,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 15-3: _React com Redux - Prática_
 - [x] 15-4: _React com Redux - Actions Assíncronas_
 - [x] 15-5: _Testes síncronos com React-Redux_
-- [ ] 15-6: _[Projeto - Trybe Wallet]()_
+- [x] 15-6: _[Projeto - Trybe Wallet](https://github.com/marianasaraiva/trybe-project-trybewallet)_
 
 ##### Bloco 16: Projeto React
 
@@ -136,25 +136,35 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 19: Docker - Utilizando containers
 
-- [ ] 19-1: _Introdução - Back-end_
-- [ ] 19-2: _Utilizando Containers - Docker_
-- [ ] 19-3: _Manipulação e Criação de Imagens no Docker_
-- [ ] 19-4: _Orquestrando COntainers com Docker Compose_
+- [x] 19-1: _Introdução - Back-end_
+- [x] 19-2: _Utilizando Containers - Docker_
+- [x] 19-3: _Manipulação e Criação de Imagens no Docker_
+- [x] 19-4: _Orquestrando COntainers com Docker Compose_
 - [ ] 19-5: _[Projeto - Docker Todo-List]()_
 
-##### Bloco 21: Bancos de dados relacionais
+##### Bloco 20: Introdução à SQL
 
-- [ ] 21-1: _Funções mais usadas no SQL_
-- [ ] 21-2: _Descomplicando JOINs e UNIONs_
-- [ ] 21-3: _Stored Routines & Subqueries_
-- [ ] 21-4: _[Projeto - Vocabulary Booster]()_
+- [x] 20-1: _Introdução - Banco de dados relacionais - Banco de dados SQL_
+- [x] 20-2: _Encontrando dados em um banco de dados_
+- [x] 20-3: _Filtrando dados de forma específica_
+- [x] 20-4: _Manipulando tabelas_
+- [ ] 20-5: _[Projeto - All for One]()_
 
-##### Bloco 22: Bancos de dados relacionais
+##### Bloco 21: Funções SQL, JOINs e Normalização
 
-- [ ] 22-1: _Transformando ideias em um modelo de banco de dados_
-- [ ] 22-2: _Normalização, Formas Normais e Dumps_
-- [ ] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
-- [ ] 22-3: _[Projeto - One For All]()_
+- [x] 21-1: _Funções mais usadas no SQL_
+- [x] 21-2: _Descomplicando JOINs_
+- [x] 21-3: _Transformndo idéias em um modelo de banco de dados_
+- [ ] 21-4: _[Projeto - One for All]()_
+
+##### Bloco 22: Introdução ao desenvolvimento Web com Node.js
+
+- [x] 22-1: _Node.js - Um motor JavaScript_
+- [x] 22-2: _Node.js - Fuxo assíncrono_
+- [ ] 22-3: _Mocha, Chai e Sinon - Testes de Back-end com Node.js_
+- [ ] 22-4: _Express - HTTP com Node.js_
+- [ ] 22-5: _Express - Middlewares_
+- [ ] 22-6: _[Projeto - Talker Manager]()_
 
 ##### Bloco 23: Introdução - NoSQL
 
