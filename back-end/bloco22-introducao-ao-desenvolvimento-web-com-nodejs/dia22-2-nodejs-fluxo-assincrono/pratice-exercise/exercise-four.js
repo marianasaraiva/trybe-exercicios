@@ -10,6 +10,8 @@ fs.readFile('./simpsons.json', 'utf-8')
   .then((strings) => {
     return strings.forEach((string) => console.log(string))
   });
+
+  
   // .catch((err) => {
   //   console.error(`Erro ao escrever o arquivo: ${err.message}`);
   // });
