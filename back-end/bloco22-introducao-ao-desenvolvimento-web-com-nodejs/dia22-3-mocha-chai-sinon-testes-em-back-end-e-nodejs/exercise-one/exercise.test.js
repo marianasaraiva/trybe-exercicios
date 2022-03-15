@@ -1,5 +1,6 @@
 const { expect } = require("chai");
 const numeroInformado = require('./exercise');
+const textoArquivo = require('./exercise4');
 
 describe('verifica numero positivo, negativo ou neutro', () => {
   describe('verifica se N > 0', () => {
@@ -10,7 +11,7 @@ describe('verifica numero positivo, negativo ou neutro', () => {
     it('verifica se é igual a "positivo"', () => {
       const resposta = numeroInformado(5)
       expect(resposta).to.be.equals('positivo')
-    });    
+    });
   });
 
   describe('verifica se N === 0', () => {
@@ -21,7 +22,7 @@ describe('verifica numero positivo, negativo ou neutro', () => {
     it('verifica se é igual a "neutro"', () => {
       const resposta = numeroInformado(0)
       expect(resposta).to.be.equals('neutro')
-    });    
+    });
   });
 
   describe('verifica se N < 0', () => {
@@ -32,7 +33,7 @@ describe('verifica numero positivo, negativo ou neutro', () => {
     it('verifica se é igual a "negativo"', () => {
       const resposta = numeroInformado(-5)
       expect(resposta).to.be.equals('negativo')
-    });    
+    });
   });
 
   describe('quando N não é um "number"', () => {
@@ -43,10 +44,18 @@ describe('verifica numero positivo, negativo ou neutro', () => {
     it('verifica se o N é um number', () => {
       const resposta = numeroInformado('teste')
       expect(resposta).to.be.equals('o valor deve ser um número')
-    });    
+    });
   });
 });
 
-describe('verifica numero positivo, negativo ou neutro', () => {
+describe('executa conteudo de um arquivo', () => {
+  it('é uma string', () => {
+    const resposta = textoArquivo('arquivo.txt', 'Novo conteúdo');
+    expect(resposta).to.be.a('string')
+  });
 
+  it('é um "ok"', () => {
+    const resposta = textoArquivo('arquivo.txt', 'Novo conteúdo');
+    expect(resposta).to.be.equals('ok')
+  });
 });
