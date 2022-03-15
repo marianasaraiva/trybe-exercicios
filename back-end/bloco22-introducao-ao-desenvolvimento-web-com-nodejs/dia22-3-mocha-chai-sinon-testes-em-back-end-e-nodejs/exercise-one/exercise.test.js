@@ -34,4 +34,19 @@ describe('verifica numero positivo, negativo ou neutro', () => {
       expect(resposta).to.be.equals('negativo')
     });    
   });
+
+  describe('quando N não é um "number"', () => {
+    it('verifica se é uma string', () => {
+      const resposta = numeroInformado('teste')
+      expect(resposta).to.be.a('string')
+    });
+    it('verifica se o N é um number', () => {
+      const resposta = numeroInformado('teste')
+      expect(resposta).to.be.equals('o valor deve ser um número')
+    });    
+  });
+});
+
+describe('verifica numero positivo, negativo ou neutro', () => {
+
 });
