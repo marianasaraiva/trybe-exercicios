@@ -1,5 +1,9 @@
 const { expect } = require("chai");
+const fs = require('fs');
+const sinon = require('sinon');
+
 const numeroInformado = require('./exercise');
+
 const textoArquivo = require('./exercise4');
 
 describe('verifica numero positivo, negativo ou neutro', () => {
@@ -49,6 +53,14 @@ describe('verifica numero positivo, negativo ou neutro', () => {
 });
 
 describe('executa conteudo de um arquivo', () => {
+  before(() => {
+    sinon.stub(fs, 'writeFileSync');
+  });
+
+  after(() => {
+    fs.writeFileSync.restore();
+  });
+  
   it('é uma string', () => {
     const resposta = textoArquivo('arquivo.txt', 'Novo conteúdo');
     expect(resposta).to.be.a('string')
