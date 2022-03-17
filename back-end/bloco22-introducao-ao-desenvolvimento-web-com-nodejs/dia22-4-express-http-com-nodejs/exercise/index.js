@@ -46,6 +46,16 @@ app.put('/users/:name/:age', (req, res, next) => {
 // Caso dê tudo certo, a resposta deve voltar com status 200 OK .
 // Para testar sua API durante o desenvolvimento, utilize ferramentas que permitem fazer requisições HTTP, como Postman , Insomnia ou httpie .
 
+// 06. Crie um endpoint GET /simpsons
+// O endpoint deve retornar um array com todos os simpsons.
+app.get('/simpsons', rescue(async(req, res, next) => {
+  const result = await getSimpson();
+  res.status(200).json(result);
+}));
+
+
+
+
 // Tratando o erro
 app.use((err, req, res, next) => {
   res.status(500).send(`Messagem de erro: ${err.message}`);

@@ -7,9 +7,7 @@ const fs = require('fs').promises;
 
 function getSimpson(){
   return fs.readFile('./simpsons.json', 'utf-8')
-    .then((fileContent) => {
-      JSON.stringify(fileContent);
-    });
+    .then((fileContent) => JSON.parse(fileContent));
 }
 
 function setSimpson(addSimpson){
