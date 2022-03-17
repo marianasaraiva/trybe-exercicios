@@ -27,7 +27,7 @@ app.post('/hello', (req, res, next) => {
 // Caso a pessoa usuária tenha 17 anos ou menos, devolva o JSON { "message": "Unauthorized" } com o status code 401 - Unauthorized .
 app.post('/greetings', (req, res, next) => {
   const { name, age } = req.body;
-  if( parseInt(age, 10) > 17 ) res.status(200).json({ "message": `Hello, ${name}!` });
+  if( Number(age) > 17 ) res.status(200).json({ "message": `Hello, ${name}!` });
   return res.status(401).json({ "message": "Unauthorized" });
 });
 
@@ -62,6 +62,20 @@ app.get('/simpsons/:id', async (req, res, next) => {
   const findSimpson = resultGet.find((simpson)=> simpson.id === id);
   if(!findSimpson) return res.status(404).json({ message: 'simpson not found' });
   res.status(200).json(findSimpson);
+});
+
+// 08. Crie um endpoint POST /simpsons .
+// Este endpoint deve cadastrar novos personagens.
+// O corpo da requisição deve receber o seguinte JSON: { id: <id-da-personagem>, name: '<nome-da-personagem>' } .
+// Caso já exista uma personagem com o id informado, devolva o JSON { message: 'id already exists' } com o status 409 - Conflict .
+// Caso a personagem ainda não exista, adicione-a ao arquivo simpsons.json e devolva um body vazio com o status 204 - No Content . Para encerrar a request sem enviar nenhum dado, você pode utilizar res.status(204).end(); .
+app.post('/simpsons', async (req, res, next) => {
+  const { id, name } = req.body;
+  const resultGet = await getSimpson();
+  const findSimpson = resultGet.find((simpson)=> simpson.id === id);
+  if(findSimpson) return res.status(409).json({ message: 'id already exists' });
+  const resultSet = await setSimpson([...resultGet, {id, name} ]);
+  res.status(204).send();
 })
 
 // Tratando o erro

@@ -11,7 +11,7 @@ function getSimpson(){
 }
 
 function setSimpson(addSimpson){
-  return fs.whiteFile('./simpsons.json', JSON.stringify(addSimpson));
+  return fs.writeFile('./simpsons.json', JSON.stringify(addSimpson));
 }
 
 module.exports = { getSimpson, setSimpson };
