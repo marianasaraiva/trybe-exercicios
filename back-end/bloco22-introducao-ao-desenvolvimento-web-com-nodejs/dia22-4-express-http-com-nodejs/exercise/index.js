@@ -29,6 +29,14 @@ app.post('/greetings', (req, res, next) => {
   return res.status(401).json({ "message": "Unauthorized" });
 });
 
+// 04. Crie uma rota PUT /users/:name/:age .
+// Sua rota deve retornar o seguinte JSON: { "message": "Seu nome é <name> e você tem <age> anos de idade" } .
+app.put('/users/:name/:age', (req, res, next) => {
+ const { name } = req.params;
+ const { age } = req.params;
+
+ res.status(200).json({ "message": `Seu nome é ${name} e você tem ${age} anos de idade` })
+});
 
 // Tratando o erro
 app.use((err, req, res, next) => {
