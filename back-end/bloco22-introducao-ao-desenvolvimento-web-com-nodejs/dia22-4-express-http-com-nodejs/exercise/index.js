@@ -53,8 +53,16 @@ app.get('/simpsons', rescue(async(req, res, next) => {
   res.status(200).json(result);
 }));
 
-
-
+// 07. Crie um endpoint GET /simpsons/:id
+// O endpoint deve retornar o personagem com o id informado na URL da requisição.
+// Caso não exista nenhum personagem com o id especificado, retorne o JSON { message: 'simpson not found' } com o status 404 - Not Found .
+app.get('/simpsons/:id', async (req, res, next) => {
+  const { id } = req.params;
+  const resultGet = await getSimpson();
+  const findSimpson = resultGet.find((simpson)=> simpson.id === id);
+  if(!findSimpson) return res.status(404).json({ message: 'simpson not found' });
+  res.status(200).json(findSimpson);
+})
 
 // Tratando o erro
 app.use((err, req, res, next) => {
