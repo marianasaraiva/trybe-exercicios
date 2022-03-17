@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const { getSimpson, setSimpson } = require('./functions-extras');
 
 const app = express();
 app.use(bodyParser.json());
+const rescue = require('express-rescue');
 
 
 // 01. Crie uma rota GET /ping
@@ -37,6 +39,12 @@ app.put('/users/:name/:age', (req, res, next) => {
 
  res.status(200).json({ "message": `Seu nome é ${name} e você tem ${age} anos de idade` })
 });
+
+//5.  Crie uma API de dados das personagens de Simpsons
+// Utilize o modulo fs do Node para ler/escrever arquivos.
+// Caso algum erro ocorra, deve ser retornado um código 500 (Internal Server Error).
+// Caso dê tudo certo, a resposta deve voltar com status 200 OK .
+// Para testar sua API durante o desenvolvimento, utilize ferramentas que permitem fazer requisições HTTP, como Postman , Insomnia ou httpie .
 
 // Tratando o erro
 app.use((err, req, res, next) => {
