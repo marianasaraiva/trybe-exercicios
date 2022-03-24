@@ -10,7 +10,7 @@ const error = require('./middlewares/error');
 const HTTP_OK_STATUS = 200;
 const PORT = '3003';
 
-app.use('/login', users);
+app.use('/user', users);
 
 app.use(error);
 
