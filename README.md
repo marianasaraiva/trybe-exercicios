@@ -119,7 +119,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 16: Projeto React
 
-- [ ] 16-1: _[Projeto - Jogo de Trivia]()_
+- [x] 16-1: _[Projeto - Jogo de Trivia](https://github.com/marianasaraiva/trybe-project-trivia)_
 
 ##### Bloco 17: React & Context API
 
@@ -130,7 +130,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 18: Projeto Final de Front-end
 
-- [ ] 18-1: _[Projeto - App de Receitas]()_
+- [x] 18-1: _[Projeto - App de Receitas](https://github.com/marianasaraiva/trybe-project-app-recipe)_
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
