@@ -9,6 +9,7 @@ const middlewareError = (err, _req, res, _next) => {
     const statusByErrorCode = {
       notFound: 404,
       invalidData: 400,
+      invalidRequire: 404,
     };
     
     const status = statusByErrorCode[err.code] || 500;

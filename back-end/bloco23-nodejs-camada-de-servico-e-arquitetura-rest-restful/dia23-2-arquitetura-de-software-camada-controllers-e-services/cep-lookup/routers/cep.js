@@ -2,11 +2,10 @@ const express = require('express');
 const router = express.Router();
 const controllerCEP = require('../controllers/cep');
 
-router.get('/', (req, res) => {
-  const message = { message: 'Rota message OK!'}
-  return res.status(200).json(message);
-});
+router.get('/', controllerCEP.getAddress);
 
 router.get('/:cep', controllerCEP.findAddressByCEP);
+
+router.post('/', controllerCEP.createAddressNew);
 
 module.exports = router;
