@@ -3,38 +3,53 @@ const ProductModel = require('../models/productModel');
 
 const router = express.Router();
 
-router.get('/list-products', async (req, res, next) => {
-  const products = await ProductModel.getAll();
-
-  res.send(products);
+router.get('/', async (req, res, next) => {
+  try {
+    const products = await ProductModel.getAll();
+    res.status(200).json(products);
+  } catch (error) {
+    next(error);
+  }
 });
 
-router.get('/get-by-id/:id', async (req, res, next) => {
-  const product = await ProductModel.getById(req.params.id);
-
-  res.send(product);
+router.get('/:id', async (req, res, next) => {
+  try {
+    const product = await ProductModel.getById(req.params.id);
+    if (!product) return res.status(404).json({ message: 'Product not found' });
+    res.status(200).json(product);
+  } catch (error) {
+    next(error);
+  }
 });
 
-router.post('/add-user', async (req, res) => {
-  const { name, brand } = req.body;
+router.post('/', async (req, res) => {
+  try {
+    const { name, brand } = req.body;
+    const newProduct = await ProductModel.add(name, brand);
+    res.status(204).json(newProduct);
+  } catch (error) {
+    next(error);
+  }
 
-  const newProduct = await ProductModel.add(name, brand);
-
-  res.send(newProduct);
 });
 
-router.post('/delete-user/:id', async (req, res) => {
-  const products = await ProductModel.exclude(req.params.id);
-
-  res.send(products);
+router.delete('/:id', async (req, res) => {
+  try {
+    const products = await ProductModel.exclude(req.params.id);
+    res.status(200).json(products);
+  } catch (error) {
+    next(error);
+  }
 });
 
-router.post('/update-user/:id', async (req, res) => {
-  const { name, brand } = req.body;
-
-  const products = await ProductModel.update(req.params.id, name, brand);
-
-  res.send(products);
+router.put('/:id', async (req, res) => {
+  try {
+    const { name, brand } = req.body;
+    const products = await ProductModel.update(req.params.id, name, brand);
+    res.status(200).json(products);
+  } catch (error) {
+    next(error);
+  }
 });
 
 module.exports = router;
