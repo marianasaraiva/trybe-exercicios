@@ -3,6 +3,7 @@ const { expect } = require('chai');
 
 const MoviesService = require('../../services/movieService');
 const MoviesController = require('../../controllers/movieController');
+const res = require('express/lib/response');
 
 describe('Ao chamar o controller de create', () => {
   describe('quando o payload informado não é válido', () => {
