@@ -1,9 +1,9 @@
 const express = require('express');
-const { Books } = require('../models');
+const { Book } = require('../models');
 
  const findAllBook = async (_req, res, next) => {
   try {
-    const book = await Books.findAll();
+    const book = await Book.findAll();
 
     return res.status(200).json(book);
   } catch (error) {
@@ -14,7 +14,7 @@ const { Books } = require('../models');
 const findBookById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const book = await Books.findByPk(id);
+    const book = await Book.findByPk(id);
 
     if (!book) return res.status(404).json({ message: 'Usuário não encontrado' });
 
@@ -28,8 +28,7 @@ const createBook = async (req, res, next) => {
   try {
     const { title, author, pageQuantity } = req.body;
     console.log(req.body);
-    const newBook = await Books.create({ title, author, pageQuantity });
-    
+    const newBook = await Book.create({ title, author, pageQuantity });
 
     return res.status(201).json(newBook);
   } catch (error) {
@@ -41,7 +40,7 @@ const updateBook = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { title, author, pageQuantity } = req.body;
-    const bookById = await Books.update({ title, author, pageQuantity }, {where: { id }});
+    const bookById = await Book.update({ title, author, pageQuantity }, {where: { id }});
 
     console.log("update", bookById);
     if(!bookById) return res.status(404).json({ message: 'Usuário não encontrado' });
@@ -55,7 +54,7 @@ const updateBook = async (req, res, next) => {
 const deleteBook = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const book = Books.destroy({ where: { id } });
+    const book = Book.destroy({ where: { id } });
 
     console.log("deleteBook", book);
 
