@@ -17,19 +17,41 @@ app.get('/employees', async (_req, res) => {
   };
 });
 
+// Eager Loading : Traz tudo
+// app.get('/employees/:id', async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const employee = await Employee.findOne({
+//         where: { id },
+//         // retorna tudo sem o attributes, ou podemos filtrar, usando o attributes: { exclude: ['number']
+//         include: [{
+//           model: Address, as: 'addresses', attributes: { exclude: ['number'] },
+//         }],
+//       });
+
+//     if (!employee)
+//       return res.status(404).json({ message: 'Funcionário não encontrado' });
+
+//     return res.status(200).json(employee);
+//   } catch (e) {
+//     console.log(e.message);
+//     res.status(500).json({ message: 'Algo deu errado' });
+//   };
+// });
+
+// Lazy Loading:azy loading é muito útil em situações em que não sabemos se vamos, de fato, precisar buscar todas as informações de uma só vez. Aqui, se tivéssemos utilizado eager loading , teríamos buscado os dados dos funcionários mesmo quando includeAddresses não era informado, e precisaríamos excluir a chave addresses do resultado do banco caso esse parâmetro não fosse informado. Com o lazy loading , podemos carregar apenas os dados do funcionário, e carregar os dados dos endereços apenas quando necessário, economizando recursos do banco.
 app.get('/employees/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const employee = await Employee.findOne({
-        where: { id },
-        // retorna tudo sem o attributes, ou podemos filtrar, usando o attributes: { exclude: ['number']
-        include: [{
-          model: Address, as: 'addresses', attributes: { exclude: ['number'] },
-        }],
-      });
+const employee = await Employee.findOne({ where: { id } });
 
     if (!employee)
       return res.status(404).json({ message: 'Funcionário não encontrado' });
+
+       if (req.query.includeAddresses === 'true') {
+         const addresses = await Address.findAll({ where: { employeeId: id } });
+         return res.status(200).json({ employee, addresses });
+       }
 
     return res.status(200).json(employee);
   } catch (e) {
