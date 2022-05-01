@@ -180,7 +180,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 24-2: _ORM - Associations_
 - [x] 24-3: _JWT - (JSON Web Token)_
 - [x] 24-4: _Testando APIs com Testes de Integração_
-- [ ] 24-5: _[Projeto - API de Blogs]()_
+- [x] 24-5: _[Projeto - API de Blogs](https://github.com/marianasaraiva/trybe-blogs-api)_
 
 ##### Bloco 25: Deployment
 
