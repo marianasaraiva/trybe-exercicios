@@ -172,7 +172,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 23-2: _Arquitetura de Software - Camada de Controller e Service_
 - [x] 23-3: _Arquitetura Web - Rest e Restful_4
 - [x] 23-4: _Arquitetura de Software - Testando as Camadas_
-- [ ] 23-5: _[Projeto - Store Manager]()_
+- [x] 23-5: _[Projeto - Store Manager]()_
 
 ##### Bloco 24: Introdução - Node.js: ORM e Autenticação
 
