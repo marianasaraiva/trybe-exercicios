@@ -1,6 +1,6 @@
 export enum estacoes {
-  primavera = 1,
-  inverno,
-  outono,
-  verão,
+  PRIMAVERA = "primavera",
+  INVERNO = "inverno",
+  OUTONO = "outono",
+  VERAO = "verão",
 }
