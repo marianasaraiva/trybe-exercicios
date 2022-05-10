@@ -1,23 +1,23 @@
-enum Color {
+export enum Color {
   PRETA = 'preta',
   BRANCA = 'branca',
   VERMELHA = 'vermelha',
   PRATA = 'prata',
 }
 
-enum Direcao {
+export enum Direcao {
   ESQUERDA = 'esquerda',
   DIREITA = 'direita',
 }
 
-enum Portas {
+export enum Portas {
   MOTORISTA = 'porta do motorista',
   CARONA = 'porta do carona',
   PASSAGEIROESQUERDA = 'porta do passageiro esquerda',
   PASSAGEIRODIREITA = 'porta do passageiro direita',
 }
 
-class Car {
+export class Car {
   brand: string;
   color: Color;
   doors: number;

@@ -1,0 +1,34 @@
+import { Color, Direcao, Portas, Car } from './exercise1';
+
+const gol = new Car("Volkswagen", Color.PRATA, 4);
+
+gol.openTheDoor(Portas.MOTORISTA);
+gol.closeTheDoor(Portas.MOTORISTA);
+gol.turnOn();
+gol.speedUp();
+gol.speedDown();
+gol.turn(Direcao.ESQUERDA);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Direcao.DIREITA);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Direcao.DIREITA);
+gol.speedDown();
+gol.stop();
+gol.openTheDoor(Portas.PASSAGEIRODIREITA);
+gol.closeTheDoor(Portas.PASSAGEIRODIREITA);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Direcao.DIREITA);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Direcao.ESQUERDA);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Direcao.DIREITA);
+gol.speedDown();
+gol.stop();
+gol.openTheDoor(Portas.PASSAGEIRODIREITA);
+gol.closeTheDoor(Portas.PASSAGEIRODIREITA);
+gol.speedUp();
