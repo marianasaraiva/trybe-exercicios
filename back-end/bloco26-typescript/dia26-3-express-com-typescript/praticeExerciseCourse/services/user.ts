@@ -9,4 +9,9 @@ export default class UserService {
     const allUsers = await this.model.getAll();
     return allUsers;
   }
+
+  public create = async (user: IUser): Promise<IUser> => {
+    const createUser = await this.model.create(user);
+    return createUser;
+  }
 }

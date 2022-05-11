@@ -12,14 +12,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// import { ResultSetHeader } from 'mysql2/promise';
 const connection_1 = __importDefault(require("./connection"));
 class UserModel {
     constructor() {
         this.getAll = () => __awaiter(this, void 0, void 0, function* () {
-            const query = 'SELECT * FROM TypeScriptExpress.Users';
+            const query = 'SELECT id, name, email FROM TypeScriptExpress.Users';
             const [allUsers] = yield connection_1.default.execute(query);
             return allUsers;
+        });
+        this.create = (user) => __awaiter(this, void 0, void 0, function* () {
+            const { name, email, password } = user;
+            const query = 'INSERT INTO TypeScriptExpress.Users (name, email, password) VALUES (?, ?, ?);';
+            const createUser = yield connection_1.default.execute(query, [name, email, password]);
+            const [data] = createUser;
+            const { insertId } = data;
+            return Object.assign({ id: insertId }, user);
         });
     }
 }

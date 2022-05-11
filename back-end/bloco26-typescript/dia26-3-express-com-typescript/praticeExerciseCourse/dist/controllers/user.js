@@ -20,6 +20,11 @@ class UserController {
             const allUsers = yield this.service.getAll();
             return res.status(200).json(allUsers);
         });
+        this.create = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            const user = req.body;
+            const userCreated = yield this.service.create(user);
+            res.status(200).json(userCreated);
+        });
     }
 }
 exports.default = UserController;

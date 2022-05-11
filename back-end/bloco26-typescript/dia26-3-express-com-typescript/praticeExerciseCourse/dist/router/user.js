@@ -8,4 +8,5 @@ const user_1 = __importDefault(require("../controllers/user"));
 const route = (0, express_1.Router)();
 const controller = new user_1.default();
 route.get('/', controller.getAll);
+route.post('/', controller.create);
 exports.default = route;

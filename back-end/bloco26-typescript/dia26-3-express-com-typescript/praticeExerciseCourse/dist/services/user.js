@@ -21,6 +21,10 @@ class UserService {
             const allUsers = yield this.model.getAll();
             return allUsers;
         });
+        this.create = (user) => __awaiter(this, void 0, void 0, function* () {
+            const createUser = yield this.model.create(user);
+            return createUser;
+        });
     }
 }
 exports.default = UserService;
