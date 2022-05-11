@@ -15,7 +15,7 @@ export enum Portas {
   CARONA = 'porta do carona',
   PASSAGEIROESQUERDA = 'porta do passageiro esquerda',
   PASSAGEIRODIREITA = 'porta do passageiro direita',
-}
+}                                                  
 
 export class Car {
   brand: string;
