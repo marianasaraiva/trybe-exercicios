@@ -19,4 +19,14 @@ export default class UserService {
     const createUser = await this.model.create(user);
     return createUser;
   }
+
+  public update = async (id: number, user: IUser): Promise<void> => {
+    const userById = await this.model.getById(id);
+
+    if (!userById) {
+      throw new Error;
+    }
+
+    await this.model.update(id, user);
+  }
 }

@@ -19,10 +19,20 @@ export default class UserController {
     return res.status(200).json(userById);
   }
 
-  public create = async (req: Request, res: Response) => {
+  public create = async (req: Request, res: Response): Promise<Response>=> {
     const user = req.body;
 
     const userCreated = await this.service.create(user);
-    res.status(200).json(userCreated);
+    return res.status(200).json(userCreated);
   };
+
+  public update = async (req: Request, res: Response) => {
+    const id = Number(req.params.id);
+
+    const user = req.body;
+
+    await this.service.update(id, user);
+    
+    return res.status(201).end();
+  }
 }

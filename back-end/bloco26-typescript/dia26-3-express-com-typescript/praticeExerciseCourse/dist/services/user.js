@@ -29,6 +29,13 @@ class UserService {
             const createUser = yield this.model.create(user);
             return createUser;
         });
+        this.update = (id, user) => __awaiter(this, void 0, void 0, function* () {
+            const userById = yield this.model.getById(id);
+            if (!userById) {
+                throw new Error;
+            }
+            yield this.model.update(id, user);
+        });
     }
 }
 exports.default = UserService;

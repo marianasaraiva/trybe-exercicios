@@ -34,6 +34,11 @@ class UserModel {
             const { insertId } = data;
             return Object.assign({ id: insertId }, user);
         });
+        this.update = (id, user) => __awaiter(this, void 0, void 0, function* () {
+            const { name, email, password } = user;
+            const query = 'UPDATE TypeScriptExpress.Users SET name=?, email=?, password=? WHERE id=?';
+            yield connection_1.default.execute(query, [name, email, password, id]);
+        });
     }
 }
 exports.default = UserModel;

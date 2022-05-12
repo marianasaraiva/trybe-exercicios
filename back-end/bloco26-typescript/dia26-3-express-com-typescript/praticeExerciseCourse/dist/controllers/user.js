@@ -31,7 +31,13 @@ class UserController {
         this.create = (req, res) => __awaiter(this, void 0, void 0, function* () {
             const user = req.body;
             const userCreated = yield this.service.create(user);
-            res.status(200).json(userCreated);
+            return res.status(200).json(userCreated);
+        });
+        this.update = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            const id = parseInt(req.params.id);
+            const user = req.body;
+            yield this.service.update(id, user);
+            return res.status(201).end();
         });
     }
 }

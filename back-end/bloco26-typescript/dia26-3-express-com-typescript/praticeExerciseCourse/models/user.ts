@@ -26,4 +26,10 @@ export default class UserModel {
     const { insertId } = data;
     return {id: insertId, ...user};
   }
+
+  public update = async (id: number, user: IUser): Promise<void> => {
+    const { name, email, password } = user;
+    const query = 'UPDATE TypeScriptExpress.Users SET name=?, email=?, password=? WHERE id=?'
+    await connection.execute(query, [name, email, password, id]);
+  }
 }
