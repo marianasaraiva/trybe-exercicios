@@ -32,4 +32,9 @@ export default class UserModel {
     const query = 'UPDATE TypeScriptExpress.Users SET name=?, email=?, password=? WHERE id=?'
     await connection.execute(query, [name, email, password, id]);
   }
+
+  public deleteById = async (id: number): Promise<void> => {
+    const query = 'DELETE FROM TypeScriptExpress.Users WHERE id=?'
+    await connection.execute(query, [id]);
+  }
 }

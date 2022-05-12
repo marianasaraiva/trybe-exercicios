@@ -31,10 +31,17 @@ class UserService {
         });
         this.update = (id, user) => __awaiter(this, void 0, void 0, function* () {
             const userById = yield this.model.getById(id);
-            if (!userById) {
-                throw new Error;
-            }
+            // if (!userById) {
+            //   throw new Error;
+            // }
             yield this.model.update(id, user);
+        });
+        this.deleteById = (id) => __awaiter(this, void 0, void 0, function* () {
+            const UserId = yield this.model.getById(id);
+            // if (!UserId) {
+            //   throw new Error;
+            // }
+            yield this.model.deleteById(id);
         });
     }
 }

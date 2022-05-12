@@ -39,6 +39,10 @@ class UserModel {
             const query = 'UPDATE TypeScriptExpress.Users SET name=?, email=?, password=? WHERE id=?';
             yield connection_1.default.execute(query, [name, email, password, id]);
         });
+        this.deleteById = (id) => __awaiter(this, void 0, void 0, function* () {
+            const query = 'DELETE FROM TypeScriptExpress.Users WHERE id=?';
+            yield connection_1.default.execute(query, [id]);
+        });
     }
 }
 exports.default = UserModel;

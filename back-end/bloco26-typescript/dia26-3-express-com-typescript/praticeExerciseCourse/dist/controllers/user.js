@@ -34,10 +34,15 @@ class UserController {
             return res.status(200).json(userCreated);
         });
         this.update = (req, res) => __awaiter(this, void 0, void 0, function* () {
-            const id = parseInt(req.params.id);
+            const id = Number(req.params.id);
             const user = req.body;
             yield this.service.update(id, user);
             return res.status(201).end();
+        });
+        this.deleteById = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            const id = parseInt(req.params.id);
+            yield this.service.deleteById(id);
+            return res.status(200).json({ message: 'User deleted successfully' });
         });
     }
 }

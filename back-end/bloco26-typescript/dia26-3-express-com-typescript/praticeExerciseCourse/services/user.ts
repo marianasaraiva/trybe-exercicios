@@ -23,10 +23,18 @@ export default class UserService {
   public update = async (id: number, user: IUser): Promise<void> => {
     const userById = await this.model.getById(id);
 
-    if (!userById) {
-      throw new Error;
-    }
+    // if (!userById) {
+    //   throw new Error;
+    // }
 
     await this.model.update(id, user);
+  }
+
+  public deleteById = async (id: number): Promise<void> => {
+    const UserId = await this.model.getById(id);
+    // if (!UserId) {
+    //   throw new Error;
+    // }
+    await this.model.deleteById(id);
   }
 }

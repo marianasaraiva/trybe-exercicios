@@ -26,7 +26,7 @@ export default class UserController {
     return res.status(200).json(userCreated);
   };
 
-  public update = async (req: Request, res: Response) => {
+  public update = async (req: Request, res: Response): Promise<Response> => {
     const id = Number(req.params.id);
 
     const user = req.body;
@@ -34,5 +34,11 @@ export default class UserController {
     await this.service.update(id, user);
     
     return res.status(201).end();
+  }
+
+  public deleteById = async (req: Request, res: Response): Promise<Response>=> {
+    const id = parseInt(req.params.id);
+    await this.service.deleteById(id);
+    return res.status(200).json({ message: 'User deleted successfully' });
   }
 }
