@@ -10,6 +10,11 @@ export default class UserService {
     return allUsers;
   }
 
+  public getById = async (id: number):Promise<IUser> => {
+    const userById = await this.model.getById(id);
+    return userById;
+  }
+
   public create = async (user: IUser): Promise<IUser> => {
     const createUser = await this.model.create(user);
     return createUser;

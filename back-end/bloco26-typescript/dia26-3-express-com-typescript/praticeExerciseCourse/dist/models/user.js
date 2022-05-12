@@ -20,6 +20,12 @@ class UserModel {
             const [allUsers] = yield connection_1.default.execute(query);
             return allUsers;
         });
+        this.getById = (id) => __awaiter(this, void 0, void 0, function* () {
+            const query = 'SELECT * FROM TypeScriptExpress.Users WHERE id=?';
+            const [result] = yield connection_1.default.execute(query, [id]);
+            const [userById] = result;
+            return userById;
+        });
         this.create = (user) => __awaiter(this, void 0, void 0, function* () {
             const { name, email, password } = user;
             const query = 'INSERT INTO TypeScriptExpress.Users (name, email, password) VALUES (?, ?, ?);';

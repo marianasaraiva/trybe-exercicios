@@ -11,6 +11,13 @@ export default class UserModel {
     return allUsers as IUser[];
   }
 
+  public getById = async (id: number): Promise<IUser> => {
+    const query = 'SELECT * FROM TypeScriptExpress.Users WHERE id=?';
+    const [result] = await connection.execute(query, [id]);
+    const [userById] = result as IUser[];
+    return userById;
+  }
+
   public create = async (user: IUser): Promise<IUser>=> {
     const { name, email, password } = user;
     const query = 'INSERT INTO TypeScriptExpress.Users (name, email, password) VALUES (?, ?, ?);';

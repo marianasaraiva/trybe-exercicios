@@ -9,6 +9,16 @@ export default class UserController {
     return res.status(200).json(allUsers);
   }
 
+  public getById = async (req: Request, res: Response): Promise<Response> => {
+    const id = parseInt(req.params.id);
+    const userById = await this.service.getById(id);
+
+    if(!userById) {
+      return res.status(404).json({ message: 'User not found!'});
+    }
+    return res.status(200).json(userById);
+  }
+
   public create = async (req: Request, res: Response) => {
     const user = req.body;
 

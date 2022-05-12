@@ -11,7 +11,7 @@ const user_1 = __importDefault(require("./router/user"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const PORT = process.env.PORT || 8000;
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
     return res.status(200).send('Room 4 - Gabriel, Israel, Mariana');
 });
 app.use('/users', user_1.default);

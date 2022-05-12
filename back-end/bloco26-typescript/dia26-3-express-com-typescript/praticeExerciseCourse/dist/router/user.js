@@ -9,4 +9,5 @@ const route = (0, express_1.Router)();
 const controller = new user_1.default();
 route.get('/', controller.getAll);
 route.post('/', controller.create);
+route.get('/:id', controller.getById);
 exports.default = route;

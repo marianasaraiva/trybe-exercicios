@@ -20,6 +20,14 @@ class UserController {
             const allUsers = yield this.service.getAll();
             return res.status(200).json(allUsers);
         });
+        this.getById = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            const id = parseInt(req.params.id);
+            const userById = yield this.service.getById(id);
+            if (!userById) {
+                return res.status(404).json({ message: 'User not found!' });
+            }
+            return res.status(200).json(userById);
+        });
         this.create = (req, res) => __awaiter(this, void 0, void 0, function* () {
             const user = req.body;
             const userCreated = yield this.service.create(user);
