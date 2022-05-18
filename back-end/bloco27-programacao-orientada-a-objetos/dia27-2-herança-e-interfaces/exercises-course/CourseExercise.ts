@@ -5,19 +5,23 @@ class SuperClass {
     this.isSuper = true;
   }
 
-  sayHello() {
+  protected sayHello(): void {
     console.log('Olá mundo!')
   }
 }
 
-class SubClass extends SuperClass {}
-
-const myFunc = (object: SuperClass) => {
-  object.sayHello();
+class SubClass extends SuperClass {
+  public sayHello2(): void {
+    this.sayHello();
+  }
 }
 
-const sup = new SuperClass();
+const myFunc = (object: SubClass) => {
+  object.sayHello2();
+}
+
+// const sup = new SuperClass();
 const sub = new SubClass();
 
-myFunc(sup);
+// myFunc(sup);
 myFunc(sub);
