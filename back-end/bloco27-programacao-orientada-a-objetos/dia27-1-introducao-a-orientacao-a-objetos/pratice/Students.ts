@@ -23,7 +23,7 @@ class Students {
     return this._nome;
   }
 
-  set name(value: string) {
+  set nome(value: string) {
     if (value.length < 3) {
       throw new Error('O nome deve conter no mínimo 3 caracteres');
     } else {
@@ -73,13 +73,13 @@ student1.prova = [10, 8, 9, 10];
 student1.trabalho = [5, 2];
 
 console.log(student1);
-console.log('Soma das notas das provas: ', student1.somaNotas());
-console.log('Soma das notas dos trabalhos: ', student1.mediaNotas());
+console.log('Soma das notas das provas e trabalhos: ', student1.somaNotas());
+console.log('Media das notas: ', student1.mediaNotas());
 
 const student2 = new Students('0002', 'Fernanda');
 student2.prova = [7, 6, 9, 10];
 student2.trabalho = [5, 5];
 
 console.log(student2);
-console.log('Soma das notas das provas: ', student2.somaNotas());
-console.log('Soma das notas dos trabalhos: ', student2.mediaNotas());
+console.log('Soma das notas das provas e trabalhos: ', student2.somaNotas());
+console.log('Media das notas: ', student2.mediaNotas());
