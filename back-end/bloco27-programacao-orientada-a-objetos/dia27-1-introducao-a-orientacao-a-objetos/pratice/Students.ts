@@ -83,3 +83,5 @@ student2.trabalho = [5, 5];
 console.log(student2);
 console.log('Soma das notas das provas e trabalhos: ', student2.somaNotas());
 console.log('Media das notas: ', student2.mediaNotas());
+
+// comando para testar o código no terminal: npx ts-node-dev Students.ts
