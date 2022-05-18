@@ -184,24 +184,24 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 25: Deployment
 
-- [ ] 25-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 25-2: _Deploy Docker & Heroku_
+- [x] 25-1: _Infraestrutura - Deploy com Heroku_
+- [x] 25-2: _Deploy Docker & Heroku_
 - [ ] 25-3: _[Projeto - Stranger Things]()_
 
 ##### Bloco 26: TypeScript
 
-- [ ] 26-1: _Introdução ao TypeScript_
-- [ ] 26-2: _Tipagem Estática e Generics_
-- [ ] 26-3: _Express com TypeScript_
+- [x] 26-1: _Introdução ao TypeScript_
+- [x] 26-2: _Tipagem Estática e Generics_
+- [x] 26-3: _Express com TypeScript_
 - [ ] 26-4: _[Projeto - Trybe Smith]()_
 
 ##### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
 
-- [ ] 27-1: _Introdução à Orientação a Objetos_
-- [ ] 27-2: _Herança e Interfaces_
-- [ ] 27-3: _Polimorfismo_
-- [ ] 27-4: _SOLID - Introdução e Princípios S, O e D_
-- [ ] 27-5: _SOLID - Princípios L e I_
+- [x] 27-1: _Introdução à Orientação a Objetos_
+- [x] 27-2: _Herança e Interfaces_
+- [x] 27-3: _Polimorfismo_
+- [x] 27-4: _SOLID - Introdução e Princípios S, O e D_
+- [x] 27-5: _SOLID - Princípios L e I_
 - [ ] 27-6: _[Projeto - Trybers and Dragons]()_
 
 ##### Bloco 28 - Projeto - TFC - Trybe Futebol Clube
