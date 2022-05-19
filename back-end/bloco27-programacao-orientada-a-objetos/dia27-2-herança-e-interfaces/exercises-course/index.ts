@@ -36,14 +36,31 @@
 // console.log(fernando);
 
 
-// exercise 4
+// // exercise 4
+// import Subject from './Subject';
+
+// const matematica = new Subject('Matemática');
+// const portugues = new Subject('Português');
+// const historia = new Subject('História');
+
+// console.log(matematica);
+// console.log(portugues);
+// console.log(historia);
+
+
+// exercise 5:
 import Subject from './Subject';
+import Teacher from './Teacher';
 
 const matematica = new Subject('Matemática');
 const portugues = new Subject('Português');
 const historia = new Subject('História');
 
-console.log(matematica);
-console.log(portugues);
-console.log(historia);
+const marta = new Teacher('Maria', new Date('1980/03/30'), 2500, matematica);
+const joao = new Teacher('João', new Date('1982/04/21'), 2500, portugues);
+const jose = new Teacher('José', new Date('1986/01/29'), 2500, historia);
+
+console.log(marta);
+console.log(joao);
+console.log(jose);
 
