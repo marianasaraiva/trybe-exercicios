@@ -88,25 +88,25 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [x] 11-1: _Components com estado e eventos_
 - [x] 11-2: _Formulários no React_
-- [ ] 11-3: _[Projeto - Tryunfo]()_
+- [x] 11-3: _[Projeto - Tryunfo](https://github.com/marianasaraiva/trybe-tryunfo)_
 
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
 
 - [x] 12-1: _Ciclo de vida de componentes em React_
 - [x] 12-2: _React Router_
-- [ ] 12-3: _[Projeto - TrybeTunes]()_
+- [x] 12-3: _[Projeto - TrybeTunes](https://github.com/marianasaraiva/trybe-trybetunes)_
 
 ##### Bloco 13: Metodologias Ágeis
 
 - [x] 13-1: _Metodologias Ágeis_
-- [ ] 13-2: _[Projeto - Frontend Online Store]()_
+- [x] 13-2: _[Projeto - Frontend Online Store](https://github.com/marianasaraiva/trybe-frontend-online-store)_
 
 ##### Bloco 14: Testes automzatizados com React Testing Library
 
 - [x] 14-1: _Testando React com a React Testing Library - Primeiros Passos_
 - [x] 14-2: _Testando React com a React Testing Library - Mocks e Inputs_
 - [x] 14-3: _Testando React com a React Testing Library - Testando React Router_
-- [ ] 14-4: _[Projeto - Testes em React]()_
+- [x] 14-4: _[Projeto - Testes em React](https://github.com/marianasaraiva/trybe-react-testing-library)_
 
 ##### Bloco 15: Introdução ao Redux
 
@@ -202,7 +202,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 27-3: _Polimorfismo_
 - [x] 27-4: _SOLID - Introdução e Princípios S, O e D_
 - [x] 27-5: _SOLID - Princípios L e I_
-- [ ] 27-6: _[Projeto - Trybers and Dragons]()_
+- [x] 27-6: _[Projeto - Trybers and Dragons](https://github.com/marianasaraiva/trybe-T-D)_
 
 ##### Bloco 28 - Projeto - TFC - Trybe Futebol Clube
 
