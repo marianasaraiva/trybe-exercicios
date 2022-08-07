@@ -1,4 +1,4 @@
-# Trybe
+# :dart: Trybe
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Mariana Saraiva](https://www.linkedin.com/in/marianascmoura/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
@@ -6,7 +6,7 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 
 O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.
 
-## Introdução - Desenvolvimento Web :white_check_mark:
+## :pushpin: Introdução - Desenvolvimento Web :white_check_mark:
 
 ##### Bloco 1: Introdução - Unix & Shell
 
@@ -76,7 +76,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 9-3: _Jest - Testes Assíncronos_
 - [x] 9-3: _[Projeto - Carrinho de Compras](https://github.com/marianasaraiva/trybe-project-shopping-cart)_
 
-## Desenvolvimento Front-end :white_check_mark:
+## :pushpin: Desenvolvimento Front-end :white_check_mark:
 
 ##### Bloco 10: Introdução - React
 
@@ -88,25 +88,25 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [x] 11-1: _Components com estado e eventos_
 - [x] 11-2: _Formulários no React_
-- [ ] 11-3: _[Projeto - Tryunfo]()_
+- [x] 11-3: _[Projeto - Tryunfo](https://github.com/marianasaraiva/trybe-tryunfo)_
 
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
 
 - [x] 12-1: _Ciclo de vida de componentes em React_
 - [x] 12-2: _React Router_
-- [ ] 12-3: _[Projeto - TrybeTunes]()_
+- [x] 12-3: _[Projeto - TrybeTunes](https://github.com/marianasaraiva/trybe-trybetunes)_
 
 ##### Bloco 13: Metodologias Ágeis
 
 - [x] 13-1: _Metodologias Ágeis_
-- [ ] 13-2: _[Projeto - Frontend Online Store]()_
+- [x] 13-2: _[Projeto - Frontend Online Store](https://github.com/marianasaraiva/trybe-frontend-online-store)_
 
 ##### Bloco 14: Testes automzatizados com React Testing Library
 
 - [x] 14-1: _Testando React com a React Testing Library - Primeiros Passos_
 - [x] 14-2: _Testando React com a React Testing Library - Mocks e Inputs_
 - [x] 14-3: _Testando React com a React Testing Library - Testando React Router_
-- [ ] 14-4: _[Projeto - Testes em React]()_
+- [x] 14-4: _[Projeto - Testes em React](https://github.com/marianasaraiva/trybe-react-testing-library)_
 
 ##### Bloco 15: Introdução ao Redux
 
@@ -132,7 +132,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [x] 18-1: _[Projeto - App de Receitas](https://github.com/marianasaraiva/trybe-project-app-recipe)_
 
-## Desenvolvimento Back-end :hourglass_flowing_sand:
+## :pushpin: Desenvolvimento Back-end :hourglass_flowing_sand:
 
 ##### Bloco 19: Docker - Utilizando containers
 
@@ -172,7 +172,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 23-2: _Arquitetura de Software - Camada de Controller e Service_
 - [x] 23-3: _Arquitetura Web - Rest e Restful_4
 - [x] 23-4: _Arquitetura de Software - Testando as Camadas_
-- [x] 23-5: _[Projeto - Store Manager]()_
+- [x] 23-5: _[Projeto - Store Manager](https://github.com/marianasaraiva/trybe-store-manager)_
 
 ##### Bloco 24: Introdução - Node.js: ORM e Autenticação
 
@@ -202,15 +202,15 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 27-3: _Polimorfismo_
 - [x] 27-4: _SOLID - Introdução e Princípios S, O e D_
 - [x] 27-5: _SOLID - Princípios L e I_
-- [ ] 27-6: _[Projeto - Trybers and Dragons]()_
+- [x] 27-6: _[Projeto - Trybers and Dragons](https://github.com/marianasaraiva/trybe-T-D)_
 
 ##### Bloco 28 - Projeto - TFC - Trybe Futebol Clube
 
-- [ ] 28-1: _[Projeto - TFC - Trybe Futebol Clube]()_
+- [x] 28-1: _[Projeto - TFC - Trybe Futebol Clube](https://github.com/marianasaraiva/trybe-TFC)_
 
 ##### Bloco 29 - Introdução ao MongoDB
 
-- [ ] 29-1: _Introdução - NoSQL e MongoDB - Introdução_
+- [x] 29-1: _Introdução - NoSQL e MongoDB - Introdução_
 - [ ] 29-2: _Filter Operators_
 - [ ] 29-3: _Operadores de consulta_
 - [ ] 29-4: _Updates Simples_
@@ -232,7 +232,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [ ] 32-1: _Dia 1_
 - [ ] 32-2: _Dia 2_
 
-## Ciência da Computação :hourglass_flowing_sand:
+## :pushpin: Ciência da Computação :hourglass_flowing_sand:
 
 ##### Bloco 33 - Introdução à Python
 
