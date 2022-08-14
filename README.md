@@ -219,8 +219,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 30 - MongoDB com Node.js e POO
 
-- [ ] 30-1: _MongoDB e arquitetura MSC_
-- [ ] 30-2: _MongoDB e POO_
+- [x] 30-1: _MongoDB e arquitetura MSC_
+- [x] 30-2: _MongoDB e POO_
 - [ ] 30-3: _[Projeto - Car Shop]()_
 
 ##### Bloco 31 - Projeto - App de Delivery
@@ -229,23 +229,23 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 32 - MasterClass - VPS, CI/CD
 
-- [ ] 32-1: _Dia 1_
-- [ ] 32-2: _Dia 2_
+- [x] 32-1: _Dia 1_
+- [x] 32-2: _Dia 2_
 
 ## :pushpin: Ciência da Computação :hourglass_flowing_sand:
 
 ##### Bloco 33 - Introdução à Python
 
-- [ ] 33-1: _Introdução - Ciência da Computação e Aprendendo Python_
-- [ ] 33-2: _Entrada e Saída de Dados_
-- [ ] 33-3: _Testes_
+- [x] 33-1: _Introdução - Ciência da Computação e Aprendendo Python_
+- [x] 33-2: _Entrada e Saída de Dados_
+- [x] 33-3: _Testes_
 - [ ] 33-4: _[Projeto - Job Insights]()_
 
 ##### Bloco 34 - Padrões de Projeto
 
-- [ ] 34-1: _P.O.O em Python_
-- [ ] 34-2: _Padrões - Iterator, Adapter, Strategy_
-- [ ] 34-3: _Padrões - Decorator, Observer, Factory_
+- [x] 34-1: _P.O.O em Python_
+- [x] 34-2: _Padrões - Iterator, Adapter, Strategy_
+- [x] 34-3: _Padrões - Decorator, Observer, Factory_
 - [ ] 34-4: _[Projeto - Relatórios de Estoque]()_
 
 ##### Bloco 35 - Redes e Raspagem de Dados
