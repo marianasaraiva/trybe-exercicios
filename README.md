@@ -126,7 +126,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 17-1: _Context API do React_
 - [x] 17-2: _React Hooks - useState e useContext_
 - [x] 17-3: _React Hooks - useEffect e Hooks customizados_
-- [ ] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [x] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks](https://github.com/marianasaraiva/trybe-star-wars-planet)_
 
 ##### Bloco 18: Projeto Final de Front-end
 
@@ -140,7 +140,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 19-2: _Utilizando Containers - Docker_
 - [x] 19-3: _Manipulação e Criação de Imagens no Docker_
 - [x] 19-4: _Orquestrando COntainers com Docker Compose_
-- [ ] 19-5: _[Projeto - Docker Todo-List]()_
+- [x] 19-5: _[Projeto - Docker Todo-List](https://github.com/marianasaraiva/trybe-docker-todo-list)_
 
 ##### Bloco 20: Introdução à SQL
 
@@ -148,7 +148,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 20-2: _Encontrando dados em um banco de dados_
 - [x] 20-3: _Filtrando dados de forma específica_
 - [x] 20-4: _Manipulando tabelas_
-- [ ] 20-5: _[Projeto - All for One]()_
+- [x] 20-5: _[Projeto - All for One](https://github.com/marianasaraiva/trybe-mysql-all-for-one)_
 
 ##### Bloco 21: Funções SQL, JOINs e Normalização
 
@@ -186,14 +186,15 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [x] 25-1: _Infraestrutura - Deploy com Heroku_
 - [x] 25-2: _Deploy Docker & Heroku_
-- [ ] 25-3: _[Projeto - Stranger Things]()_
+- [x] 25-3-1: _[Projeto - Stranger Things - Backend](https://github.com/marianasaraiva/trybe-stranger-things-backend)_
+- [x] 25-3-2: _[Projeto - Stranger Things - Backend](https://github.com/marianasaraiva/trybe-stranger-things-frontend)_
 
 ##### Bloco 26: TypeScript
 
 - [x] 26-1: _Introdução ao TypeScript_
 - [x] 26-2: _Tipagem Estática e Generics_
 - [x] 26-3: _Express com TypeScript_
-- [ ] 26-4: _[Projeto - Trybe Smith]()_
+- [x] 26-4: _[Projeto - Trybe Smith](https://github.com/marianasaraiva/trybe-trybesmith)_
 
 ##### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
 
@@ -215,7 +216,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 29-3: _Operadores de consulta_
 - [x] 29-4: _Updates Simples_
 - [x] 29-5: _Updates Complexos - Arrays_
-- [ ] 29-6: _[Projeto - Commerce]()_
+- [x] 29-6: _[Projeto - Commerce](https://github.com/marianasaraiva/trybe-mongodb-commerce)_
 
 ##### Bloco 30 - MongoDB com Node.js e POO
 
