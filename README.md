@@ -240,7 +240,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 33-1: _Introdução - Ciência da Computação e Aprendendo Python_
 - [x] 33-2: _Entrada e Saída de Dados_
 - [x] 33-3: _Testes_
-- [ ] 33-4: _[Projeto - Job Insights]()_
+- [x] 33-4: _[Projeto - Job Insights](https://github.com/marianasaraiva/trybe-job-insights)_
 
 ##### Bloco 34 - Padrões de Projeto
 
