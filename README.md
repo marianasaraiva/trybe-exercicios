@@ -222,7 +222,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [x] 30-1: _MongoDB e arquitetura MSC_
 - [x] 30-2: _MongoDB e POO_
-- [ ] 30-3: _[Projeto - Car Shop]()_
+- [x] 30-3: _[Projeto - Car Shop](https://github.com/marianasaraiva/trybe-car-shop)_
 
 ##### Bloco 31 - Projeto - App de Delivery
 
@@ -247,7 +247,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 34-1: _P.O.O em Python_
 - [x] 34-2: _Padrões - Iterator, Adapter, Strategy_
 - [x] 34-3: _Padrões - Decorator, Observer, Factory_
-- [ ] 34-4: _[Projeto - Relatórios de Estoque]()_
+- [x] 34-4: _[Projeto - Inventory Report](https://github.com/marianasaraiva/trybe-inventory-report)_
 
 ##### Bloco 35 - Redes e Raspagem de Dados
 
