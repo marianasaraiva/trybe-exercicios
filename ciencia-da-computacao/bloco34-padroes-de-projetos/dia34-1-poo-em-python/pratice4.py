@@ -12,7 +12,7 @@ class ManipuladorDeLog(ABC):
 class LogEmArquivo(ManipuladorDeLog):
     @classmethod
     def log(cls, msg):
-        with open('log.txt', 'a') as arquivo:
+        with open("log.txt", "a") as arquivo:
             print(msg, file=arquivo)
 
 
@@ -30,21 +30,21 @@ class Log:
         self.__manipuladores.add(manipulador)
 
     def info(self, msg):
-        self.__log('INFO', msg)
+        self.__log("INFO", msg)
 
     def alerta(self, msg):
-        self.__log('ALERTA', msg)
+        self.__log("ALERTA", msg)
 
     def erro(self, msg):
-        self.__log('ERRO', msg)
+        self.__log("ERRO", msg)
 
     def debug(self, msg):
-        self.__log('DEBUG', msg)
+        self.__log("DEBUG", msg)
 
     def __log(self, nivel, msg):
         for manipulador in self.__manipuladores:
             manipulador.log(self.__formatar(nivel, msg))
 
     def __formatar(self, nivel, msg):
-        data = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
+        data = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         return f"[{nivel} - {data}]: {msg}"
