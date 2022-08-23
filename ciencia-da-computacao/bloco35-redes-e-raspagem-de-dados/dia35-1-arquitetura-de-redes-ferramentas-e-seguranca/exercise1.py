@@ -82,3 +82,14 @@ if __name__ == "__main__":
     # encerrado
     with TCPServer(ADDRESS, EchoHandler) as server:
         server.serve_forever()
+
+
+# Exercício 5: Utilizando o comando telnet ou o Netcat (nc):
+# Conecte no server do exercício anterior e envie informações,
+#  o server deverá imprimir as mensagens enviadas no console.
+# Pare o servidor e verifique o que aconteceu com a conexão que estava
+#  aberta com o comando telnet ou nc.
+# telnet 127.0.0.1 8085
+# Após estabelecer a conexão, digite a mensagem e tecle enter para enviá-las.
+
+
