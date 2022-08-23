@@ -28,3 +28,17 @@
 #     --header 'Authorization: ApiKey EXAMPLE-TOKEN' \
 #     --data '{ "foo": "bar" }' \
 #     localhost:3000
+
+
+# Exercício 2: Ainda utilizando o cURL, vamos explorar mais alguns conceitos
+#  do HTTP. Relembre que falamos que o HTTP organiza e dá significado aos
+#  dados encapsulados nessa camada. Por exemplo: ao vermos um 200 tanto nós
+#  quanto um client HTTP sabemos que aquela request foi realizada com sucesso.
+#  Vamos explorar isso com o cURL.
+
+# 1. Faça uma chamada GET, utilizando o cURL, para "google.com".
+# curl google.com
+
+# 2. Faça uma nova chamada a "google.com", porém agora utilizando o parâmetro
+# -L ou --location, que serve para "seguir redirecionamentos".
+# curl -L google.com
