@@ -21,4 +21,3 @@ def multiply_array(numbers):
 # variáveis que, por sua vez, armazenam um único elemento elemento em memória.
 # A variável result será responsável por armazenar o resultado numérico de
 # nossa operação de multiplicação. Por isso, nossa complexidade espacial é O(1)
-
