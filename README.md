@@ -253,13 +253,13 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [x] 35-1: _Arquitetura de redes, ferramentas e segurança_
 - [x] 35-2: _Redes e Raspagem de Dados_
-- [ ] 35-3: _[Projeto - Tech news]()_
+- [x] 35-3: _[Projeto - Tech news](https://github.com/marianasaraiva/trybe-tech-news)_
 
 ##### Bloco 36 - Algoritmos
 
-- [ ] 36-1: _Complexidade de Algoritmos_
-- [ ] 36-2: _Recursividade e Estratégias para solução de problemas_
-- [ ] 36-3: _Algoritmos de ordenação e busca_
+- [x] 36-1: _Complexidade de Algoritmos_
+- [x] 36-2: _Recursividade e Estratégias para solução de problemas_
+- [x] 36-3: _Algoritmos de ordenação e busca_
 - [ ] 36-4: _[Projeto - Algoritmos]()_
 
 # [...]
