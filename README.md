@@ -260,6 +260,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 36-1: _Complexidade de Algoritmos_
 - [x] 36-2: _Recursividade e Estratégias para solução de problemas_
 - [x] 36-3: _Algoritmos de ordenação e busca_
-- [ ] 36-4: _[Projeto - Algoritmos]()_
+- [x] 36-4: _[Projeto - Algoritmos](https://github.com/marianasaraiva/trybe-algorithms)_
 
 # [...]
