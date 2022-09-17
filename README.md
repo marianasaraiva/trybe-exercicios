@@ -269,3 +269,9 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 37-3: _Nó e Listas Encadeadas_
 - [x] 37-4: _Pilhas e Filas_
 - [ ] 37-5: _[Projeto - TING - Trybe Is Not Google]()_
+
+##### Bloco 38 - Estrutura de Dados II: Hashmap e Sets
+
+- [x] 38-1: _Hashmap e Dict_
+- [x] 38-2: _Set_
+- [ ] 38-3: _[Projeto - Restaurant Orders]()_
