@@ -262,4 +262,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 36-3: _Algoritmos de ordenação e busca_
 - [x] 36-4: _[Projeto - Algoritmos](https://github.com/marianasaraiva/trybe-algorithms)_
 
-# [...]
+##### Bloco 37 - Estrutura de Dados I: Arrays, Listas, Filas e Pilhas
+
+- [x] 37-1: _Aquitetura de Computadores_
+- [x] 37-2: _Arrays_
+- [x] 37-3: _Nó e Listas Encadeadas_
+- [x] 37-4: _Pilhas e Filas_
+- [ ] 37-5: _[Projeto - TING - Trybe Is Not Google]()_
